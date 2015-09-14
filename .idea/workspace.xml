@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="efbff2b7-70a7-4928-b7cf-c8d088955af9" name="Default" comment="From Mint">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/init.inc.php" afterPath="$PROJECT_DIR$/inc/init.inc.php" />
+    <list default="true" id="efbff2b7-70a7-4928-b7cf-c8d088955af9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="site_php.iws" />
@@ -272,7 +270,13 @@
       <option name="project" value="LOCAL" />
       <updated>1442245307913</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary=".IDEA + Mint">
+      <created>1442246392291</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1442246392291</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -315,7 +319,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="From Mint" />
-    <option name="LAST_COMMIT_MESSAGE" value="From Mint" />
+    <MESSAGE value=".IDEA + Mint" />
+    <option name="LAST_COMMIT_MESSAGE" value=".IDEA + Mint" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
