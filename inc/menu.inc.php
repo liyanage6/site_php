@@ -1,6 +1,12 @@
 <nav>
-
 <?php
+	//preparation deconnexion :
+	if(utilisateurEstConnecte() && isset($_GET['action']) && $_GET['action'] === 'deconnexion')
+	//si internaute demande une déconnexion
+	{
+		session_destroy();
+        header('location: boutique.php');
+	}
 	if(utilisateurEstConnecteEtAdmin())
     {
         echo '<a href="'. RACINE_SITE . 'admin/gestion_membres.php">Gestion des membres</a>';
@@ -12,7 +18,7 @@
         echo '<a href="'. RACINE_SITE . 'profil.php">Voir votre profil</a>';
         echo '<a href="'. RACINE_SITE . 'boutique.php">Accès à la boutique</a>';
         echo '<a href="'. RACINE_SITE . 'panier.php">Voir votre panier</a>';
-        echo '<a href="?action=deconnexion">Se déconnecter</a>';
+        echo '<a href="?action=deconnexion" onclick="header(\'Refresh:0; url=boutique.php\')">Se déconnecter</a>';
     }
     else  //menu pour le simple visiteur
     {
@@ -21,13 +27,7 @@
         echo '<a href="'. RACINE_SITE . 'boutique.php">Accès à la boutique</a>';
         echo '<a href="'. RACINE_SITE . 'panier.php">Voir votre panier</a>';
     }
-	//preparation deconnexion : 
-	if(utilisateurEstConnecte() && isset($_GET['action']) && $_GET['action'] == 'deconnexion') 
-	//si internaute demande une déconnexion
-	{
-		session_destroy();
-	}
-?>	
+?>
 
 </nav>
 <section>

@@ -28,9 +28,8 @@ if (isset($_POST['connexion'])) //Si le bouton foncctionne, j'effectue le code s
 					$_SESSION['utilisateur'][$indice]=$valeur;
 				}
 			}
-            /**
 			header("location:profil.php"); //Si le pseudo et le mdp sont corrects => accés page profil
-            */
+			
 		}
 		else //Si le mdp et/ou le pseudo sont incorrects : mesage d'erreur : 
 		{
