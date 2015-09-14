@@ -4,7 +4,8 @@ require_once('connexion_bdd.inc.php');
 require_once('fonctions.inc.php');
 
 /**
-session_start();
+ * session_start();
+ * Linux
 */
 // Je créer ma session pour les utilisateurs connectés. Je la place ici car le init.inc.php est inclu dans l'ensemble de mes pages.
 
