@@ -5,7 +5,7 @@ require_once('fonctions.inc.php');
 
 /**
  * session_start();
- * Linux - Mac
+ * Linux - Mac - Mac
 */
 // Je créer ma session pour les utilisateurs connectés. Je la place ici car le init.inc.php est inclu dans l'ensemble de mes pages.
 
