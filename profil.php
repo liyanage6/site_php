@@ -10,6 +10,9 @@ if(!utilisateurEstConnecte()){
 require_once('inc/haut_de_site.inc.php');
 require_once('inc/menu.inc.php');
 
+/**
+ * TODO: Modification du profil
+ */
 //debug($_SESSION); //Voir les informations contenues dans $_SESSION
 print"<p>Bonjour ".$_SESSION['utilisateur']['pseudo']." !</p>";
 print"<p>Votre email ".$_SESSION['utilisateur']['email']."</p>";
