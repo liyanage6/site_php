@@ -42,20 +42,28 @@ section{
 /**************************************************** Formulaire ************************************************/
 label{
     float: left;
-    width: 150px;
+    width: 250px;
 }
 table{
+    width: 100%;
     border-collapse: collapse;
+    border: thin solid #000000;
 }
 table tr td{
     text-align: center;
+    border: thin solid #000;
 }
-td, th{ padding: 5px; }
+td, th{
+    padding: 5px;
+    border: thin solid #000;
+}
+
 /**************************************************** Boutique ************************************************/
 .gauche{
     float: left;
     width: 150px;
-    /*background: #ff3366;*/
+    background: #04baf6;
+    border: solid thin black;
 }
 .droite div{ padding: 10px; }
 .droite div:hover{
@@ -63,10 +71,10 @@ td, th{ padding: 5px; }
 }
 .droite{
     float: left;
-    width: 400px;
+    width: 1100px;
     padding: 0 0 0 25px;
     border-left: 1px solid;
-    /*background: #996633;*/
+    background: #996633;
 }
 img{
     box-shadow: 1px 1px 12px;

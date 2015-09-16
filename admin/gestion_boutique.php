@@ -23,7 +23,7 @@ if(isset($_POST['ajouter']))
 	if($reference->num_rows > 0 && isset($_GET['action']) && $_GET['action']=="ajout")
 	//si la référence existe et que nous sommes dans le cas d'un ajout(cf. GET = récup URL)
 	{
-		$msg .= "<div class='erreur'> La référence est déjà attribuée. Veuillez vérifier votre saisie</div>";
+		echo $msg .= "<div class='erreur'> La référence est déjà attribuée. Veuillez vérifier votre saisie</div>";
 	}
 	else //la référence est valable : l'artivle peut etre enregistré ! 
 	{
@@ -39,12 +39,18 @@ if(isset($_POST['ajouter']))
 		if (!empty($_FILE['photo']['name'])) 
 		{
 			
-
-			
 		}
+		$ajoutArticle = executeRequete("INSERT INTO article (id_article,reference, categorie, titre, description, couleur, taille, sexe, prix, stock) VALUES  ('$_POST[id_article]','$_POST[reference]','$_POST[categorie]','$_POST[titre]','$_POST[description]','$_POST[couleur]','$_POST[taille]','$_POST[sexe]','$_POST[prix]','$_POST[stock]')");
+		echo $msg .= "<div class='validation'>Félicitation Ajout d'un article !! </div>";
 	}
 }
 
+/**
+ * TODO: Boutton Supprimer et Modifier
+ */
+if(utilisateurEstConnecteEtAdmin() && isset($_GET['action']) && $_GET['action'] === 'supprimer'){
+	//$suppressionArticle = executeRequete("DELETE * FROM article WHERE id_article = ''");
+}
 
 //j'inclus les parties de mon site : 
 require_once('../inc/haut_de_site.inc.php');
@@ -74,7 +80,7 @@ require_once('../inc/menu.inc.php');
 		<textarea id="description" name="description" ></textarea cols="25" rows="7"><br>
 
 		<label for="couleur">Couleur</label>
-		<input type="text" id="couleur" name="couleur" value=""><br>
+		<input type="color" id="couleur" name="couleur" value=""><br>
 		
 		<label for="taille">Taille</label>
 		<select name="taille" id="taille">
@@ -90,7 +96,7 @@ require_once('../inc/menu.inc.php');
 		<input type="radio" id="sexe" name="sexe" value="f">femme
 		<br>
 		
-		<label for="photo">photo</label>
+		<label for="photo">Photo</label>
 		<input type="file" id="photo" name="photo" value=""><br>
 		
 		<label for="prix">Prix</label>
@@ -101,6 +107,43 @@ require_once('../inc/menu.inc.php');
 
 		<input type="submit" name="ajouter" value="Ajouter">
 	</form>
+
+<?php
+$donnee = executeRequete("SELECT * FROM article");
+
+echo '<table>
+			<tr>
+				<th hidden>ID</th>
+				<th>Reference</th>
+				<th>Categorie</th>
+				<th>Titre</th>
+				<th>Description</th>
+				<th>Couleur</th>
+				<th>Taille</th>
+				<th>Sexe</th>
+				<th>Prix</th>
+				<th>Stock</th>
+				<th>Modifier</th>
+				<th>Supprimer</th>
+			</tr>';
+while($row = mysqli_fetch_assoc($donnee)){
+	echo '	<tr>
+				<td hidden>'.$row['id_article'].'</td>
+				<td>'.$row['reference'].'</td>
+				<td>'.$row['categorie'].'</td>
+				<td>'.$row['titre'].'</td>
+				<td>'.$row['description'] .'</td>
+				<td>'.$row['couleur'] .'</td>
+				<td>'.$row['taille'] .'</td>
+				<td>'.$row['sexe'] .'</td>
+				<td>'.$row['prix'] .'</td>
+				<td>'.$row['stock'] . '</td>
+				<td><a href="?action=modifier" name="modifier">~</a></td>
+				<td><a href="?action=supprimer" name="supprimer" onclick=alert(\' Vous avez supprimer cette article\')>x</a></td>
+			</tr>';
+}
+echo '</table>';
+?>
 
 
 
