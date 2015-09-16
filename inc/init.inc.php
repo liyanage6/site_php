@@ -7,7 +7,7 @@ require_once('fonctions.inc.php');
 
 
 // Pour éviter d'avoir des problème de liens : 
-define('RACINE_SITE', '');
+define('RACINE_SITE', '/site_php/');
 
 // Si le site venait a être transferet sur internet, on définit un chemin automatique : 
 define('RACINE_SERVEUR', $_SERVER['DOCUMENT_ROOT']);

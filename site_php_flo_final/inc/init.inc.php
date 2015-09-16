@@ -6,7 +6,7 @@ require_once('fonctions.inc.php');
 session_start(); //je crée ma session pour les connectés. Je la place ici car le init.inc.php est inclu dans l'ensemble de mes pages. 
 
 //pour éviter d'avoir des problèmes de liens : 
-define('RACINE_SITE','/PHP/site_php_flo_final/');
+define('RACINE_SITE','/site_php/site_php_flo_final/');
 
 //si le site venait être transféré sur Internet, on définit un chemin automatique : 
 define('RACINE_SERVEUR',$_SERVER['DOCUMENT_ROOT']);

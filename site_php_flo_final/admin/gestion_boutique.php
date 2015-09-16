@@ -129,7 +129,7 @@ if(isset($_GET['action']) && ($_GET['action'] == 'ajout' || $_GET['action'] == '
 		{
 			$resultat = informationSurUnArticle($_GET['id_article']); 
 			$article_actuel = $resultat->fetch_assoc(); 
-      print_r($article_actuel);
+     		 print_r($article_actuel);
 		}
 	?>
 

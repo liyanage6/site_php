@@ -4,86 +4,40 @@ require_once('inc/init.inc.php');
 require_once('inc/haut_de_site.inc.php');
 require_once('inc/menu.inc.php');
 
+//AFFICHAGE DES CATEGORIES :
+$categorie_des_articles = executeRequete("SELECT DISTINCT categorie FROM article");//éviter les doublons
+
+//affichage liens catégories :
+echo "<div class='gauche'>";
+echo "<ul>";
+while($cat = $categorie_des_articles->fetch_assoc())
+{
+    echo "<li><a href='?categorie=". $cat['categorie'] ."'>" .$cat['categorie'] . "</a></li>" ;
+}
+
+echo "</ul></div>";
+
+echo '  <div class="droite">
+            <h2>Bon shooping !</h2>
+        </div>
+';
+
+//affichage articles :
+echo '<div class="droite">';
+if(isset($_GET['categorie']))//je récupère l'indice 'categorie' de l'url
+{
+    $donnees = executeRequete("SELECT id_article,reference,titre,photo,prix FROM article WHERE categorie='$_GET[categorie]'");
+
+    while($article = $donnees->fetch_assoc()) //je récupère les informations
+    {
+        echo '<div class="article">';
+        echo "<h3>$article[titre]</h3>";
+        echo "<img src='$article[photo]' width='80' height='80'><br>";
+        echo "<a href='fiche_article.php?id_article=$article[id_article]'>Voir détail</a>";
+        echo '</div>';
+    }
+}
+echo '</div>';
+
 ?>
 
-<div class="gauche">
-    <a href="?action=chemise">- Chemise</a><br>
-    <a href="?action=tshirt">- T-Shirt</a><br>
-    <a href="?action=pantalon">- Pantalon</a><br>
-</div>
-<div classe="droite">
-    <?php
-        if(utilisateurEstConnecte() && isset($_GET['action']) && $_GET['action'] === 'chemise'){
-            $afficheChemise = executeRequete("SELECT * FROM article WHERE categorie = 'Chemise'");
-            echo'<table class="droite">
-                    <tr>
-                        <th hidden>ID</th>
-                        <th>Reference</th>
-                        <th>Categorie</th>
-                        <th>Titre</th>
-                        <th>Description</th>
-                        <th>Couleur</th>
-                        <th>Taille</th>
-                        <th>Sexe</th>
-                        <th>Prix</th>
-                        <th>Stock</th>
-                        <th>Ajouter au panier</th>
-                        <th>Retirer du panier</th>
-                    </tr>';
-            while($row = mysqli_fetch_assoc($afficheChemise)){
-                echo'<tr>
-                        <td hidden>'.$row['id_article'].'</td>
-                        <td>'.$row['reference'].'</td>
-                        <td>'.$row['categorie'].'</td>
-                        <td>'.$row['titre'].'</td>
-                        <td>'.$row['description'] .'</td>
-                        <td>'.$row['couleur'] .'</td>
-                        <td>'.$row['taille'] .'</td>
-                        <td>'.$row['sexe'] .'</td>
-                        <td>'.$row['prix'] .'</td>
-                        <td>'.$row['stock'] . '</td>
-                        <td><a href="?action=ajoutPanier" name="ajoutPanier">+</a></td>
-                        <td><a href="?action=retirePanier" name="retirePanier" onclick=alert(\' Vous avez supprimer cette article\')>--</a></td>
-                     </tr>';
-            }
-            echo'</table>';
-        }
-
-    if(utilisateurEstConnecte() && isset($_GET['action']) && $_GET['action'] === 'tshirt'){
-        $afficheChemise = executeRequete("SELECT * FROM article WHERE categorie = 'T-shirt'");
-        echo'<table class="droite">
-                    <tr>
-                        <th hidden>ID</th>
-                        <th>Reference</th>
-                        <th>Categorie</th>
-                        <th>Titre</th>
-                        <th>Description</th>
-                        <th>Couleur</th>
-                        <th>Taille</th>
-                        <th>Sexe</th>
-                        <th>Prix</th>
-                        <th>Stock</th>
-                        <th>Ajouter au panier</th>
-                        <th>Retirer du panier</th>
-                    </tr>';
-        while($row = mysqli_fetch_assoc($afficheChemise)){
-            echo'<tr>
-                        <td hidden>'.$row['id_article'].'</td>
-                        <td>'.$row['reference'].'</td>
-                        <td>'.$row['categorie'].'</td>
-                        <td>'.$row['titre'].'</td>
-                        <td>'.$row['description'] .'</td>
-                        <td>'.$row['couleur'] .'</td>
-                        <td>'.$row['taille'] .'</td>
-                        <td>'.$row['sexe'] .'</td>
-                        <td>'.$row['prix'] .'</td>
-                        <td>'.$row['stock'] . '</td>
-                        <td><a href="?action=ajoutPanier" name="ajoutPanier">+</a></td>
-                        <td><a href="?action=retirePanier" name="retirePanier" onclick=alert(\' Vous avez supprimer cette article\')>--</a></td>
-                     </tr>';
-        }
-        echo'</table>';
-    }
-    ?>
-
-</div>

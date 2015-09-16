@@ -27,7 +27,7 @@ ONGLET DECONNEXION
 if(utilisateurEstConnecte() && isset($_GET['action']) && $_GET['action'] == 'deconnexion') //si l'internaute CONNECTE demande une déconnexion
 {
   session_destroy();
-  header('location:/PHP/site_php_flo_final/connexion.php');
+  header('location: connexion.php');
 }
 
 ?>
