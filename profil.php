@@ -1,12 +1,12 @@
 <?php
 require_once('inc/init.inc.php');
 
-//Si l'utilisateur n'est pas connecté : il est redirigé vers la page d'inscription 
+//Si l'utilisateur n'est pas connecté : il est redirigé vers la page d'inscription
 if(!utilisateurEstConnecte()){
 	header('location:inscription.php');
 }
 
-//j'inclus les parties de mon site : 
+//j'inclus les parties de mon site :
 require_once('inc/haut_de_site.inc.php');
 require_once('inc/menu.inc.php');
 
