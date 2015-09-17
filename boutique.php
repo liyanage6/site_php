@@ -31,8 +31,8 @@ if(isset($_GET['categorie']))//je récupère l'indice 'categorie' de l'url
     while($article = $donnees->fetch_assoc()) //je récupère les informations
     {
         echo '<div class="article">';
-        echo "<h3>$article[titre]</h3>";
-        echo "<img src='$article[photo]' width='80' height='80'><br>";
+        echo "<h4>$article[titre]</h4>";
+        echo "<img src='$article[photo]' width='140' height='140'><br><br>";
         echo "<a href='fiche_article.php?id_article=$article[id_article]'>Voir détail</a>";
         echo '</div>';
     }

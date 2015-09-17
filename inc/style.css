@@ -66,8 +66,10 @@ td, th{
     border: solid thin black;
 }
 .droite div{
+    width: 140px;
     padding: 10px;
-    border: solid thin black;
+    border: dotted thin black;
+    margin-bottom: 20px;
 }
 .droite div:hover{
     background: #ff3366;

@@ -37,7 +37,7 @@ if(isset($_POST['enregistrement']))
         {
             if(verificationExtensionPhoto()) //je vérifie l'extension de la photo : est-ce que l'extension est en minuscule ? si oui :
             {
-                $nom_photo = $_POST['reference'] . '_' .$_FILES['photo']['name']; //on renomme la photo en nous récupérant la référence UNIQUE de notre article
+                $nom_photo = $_FILES['photo']['name']; //on récupère le nom de la photo
                 $photo_bdd = RACINE_SITE . "photo/$nom_photo"; //ici on pointe le chemin où la photo sera enregistrer
                 $photo_dossier = RACINE_SERVEUR . RACINE_SITE . "/photo/$nom_photo";  //on récupère le chemin de la photo placée dans le dossier temporaire
                 copy($_FILES['photo']['tmp_name'],$photo_dossier); //on copie la photo du dossier temporaire (=> $_FILES['photo']['tmp_name']) dans le dossier de réception (=> $photo_dossier)
@@ -80,9 +80,11 @@ if(isset($_GET['action']) && $_GET['action'] == "suppression")
 include("../inc/haut_de_site.inc.php");
 include("../inc/menu.inc.php");
 echo $msg;
-echo '<ul><li> <a href="?action=affichage">Affichage des articles</a></li><li><a href="?action=ajout">Ajout d\'un
-article</a></li></ul><hr
- />';
+echo '    <ul>
+            <li> <a href="?action=affichage">Affichage des articles</a></li>
+            <li><a href="?action=ajout">Ajout d\'un
+article</a></li>
+          </ul><hr/>';
 
 if(isset($_GET['action']) && $_GET['action'] == "affichage")
 {
