@@ -84,6 +84,12 @@ function informationSurUnArticle($id)
 	return $resultat;
 }
 
+function informationSurUnMembre($id)
+{
+	$resultat = executeRequete("SELECT * FROM membre WHERE id_membre=$id");
+    return $resultat;
+}
+
 /****************
 FONCTIONS PANIER
  ****************/

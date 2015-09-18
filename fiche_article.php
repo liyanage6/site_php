@@ -49,11 +49,22 @@ else //sinon pas d'article !
     echo 'Rupture de stock !';
 }
 echo "<br/><a href='boutique.php?categorie=" . $article['categorie'] . "'>Retour vers la catégorie : $article[categorie]</a>";
-echo "  <p>
-            <br><textarea></textarea>
-        </p>";
-?>
+echo "  <h2>Commentaires</h2>
+        <form action='' method='post'>
+            <h5>Rédiger votre commentaire:</h5>
+            <textarea class='commentaire' name='commentaire'></textarea><br>
+            <input value='Envoyer' name='envoyer' type='submit'>
+        </form>
+        ";
 
+debug($_SESSION);
+
+if(isset($_POST['envoyer'])){
+
+    executeRequete("INSERT INTO commentaire (pseudo,mail,contenu) VALUES ('$_SESSION['utilisateur'][pseudo]','$_SESSION[email]','$_POST[commentaire]')");
+}
+
+?>
 
 
 
