@@ -23,11 +23,11 @@ print"<p>Votre code postal ".$_SESSION['utilisateur']['cp']."</p>";
 print"<p>Votre ville ".$_SESSION['utilisateur']['ville']."</p>";
 
 if($_SESSION['utilisateur']['statut']==1){
-	echo "Vous êtes administrateur du site mon immense seigneurie";
+	echo "Vous êtes administrateur du site ";
 }
 else
 	{
-		echo "Vous êtes un simple utilisateur de mes couilles alors FEMER LA ! ";
+		echo "Vous êtes un utilisateur ! ";
 	}
 
 echo $msg;  //affichage des messages

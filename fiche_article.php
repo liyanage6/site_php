@@ -4,17 +4,18 @@ if(isset($_GET['id_article']) && $_GET['id_article'])//je récupère les informa
 {
     //récupération des informations sur l'article :
     $resultat = informationSurUnArticle($_GET['id_article']);
+//debug($resultat);
+    if($resultat->num_rows <= 0) //la requête renvoie 0 : c'est-à-dire qu'il n'y a aucun article correspondant à l'id_article de l'url. Exemple : si l'id_article 29 n'est pas présent dans la BDD, alors num_rows sera égal à 0. Donc redirection avec la page boutique.php. Par contre, si l'id_article est présent dans la BDD, alors on affichera les informations propres à l'article en question !
+    {
+        header("location:boutique.php");
+        exit(); //on stoppe TOTALEMENT le script !! on s'arrête là !
+    }
 }
-if($resultat->num_rows <= 0) //la requête renvoie 0 : c'est-à-dire qu'il n'y a aucun article correspondant à l'id_article de l'url. Exemple : si l'id_article 29 n'est pas présent dans la BDD, alors num_rows sera égal à 0. Donc redirection avec la page boutique.php. Par contre, si l'id_article est présent dans la BDD, alors on affichera les informations propres à l'article en question !
-{
-    header("location:boutique.php");
-    exit(); //on stoppe TOTALEMENT le script !! on s'arrête là !
-}
-//j'inclus les parties de mon site : 
+//j'inclus les parties de mon site :
 require_once('inc/haut_de_site.inc.php');
 require_once('inc/menu.inc.php');
 
-$article = $resultat->fetch_assoc(); //=> je rends exploitable les informations sur l'article à afficher 
+$article = $resultat->fetch_assoc(); //=> je rends exploitable les informations sur l'article à afficher
 
 #A présent, on affiche les informations : 
 echo "<h3>Titre : $article[titre]</h3>";
@@ -57,11 +58,26 @@ echo "  <h2>Commentaires</h2>
         </form>
         ";
 
-debug($_SESSION);
+//debug($_SESSION);
+//var_dump($_SESSION['utilisateur']['pseudo']);
 
-if(isset($_POST['envoyer'])){
+if(isset($_POST['envoyer']) && $_POST['envoyer'] && utilisateurEstConnecte()){
 
-    executeRequete("INSERT INTO commentaire (pseudo,mail,contenu) VALUES ('$_SESSION['utilisateur'][pseudo]','$_SESSION[email]','$_POST[commentaire]')");
+    executeRequete("INSERT INTO commentaire (id_membre, pseudo, contenu) VALUES (".$_SESSION['utilisateur']['id_membre'].", ".$_SESSION['utilisateur']['pseudo'].", $_POST[commentaire])");
+
+}
+elseif(isset($_POST['envoyer']) && $_POST['envoyer'] && !utilisateurEstConnecte())
+{
+    echo "<div class='erreur'>Connectez-vous pour pouvoir commenter cette article</div> ";
+}
+
+    $resultat = executeRequete("SELECT * FROM commentaire");
+    echo "Nombre de commentaire(s) pour cette article : " . $resultat->num_rows;
+
+while($ligne = $resultat->fetch_assoc())
+{
+    echo "<p>".$ligne['pseudo']." a commenté: </p>";
+    echo "<textarea class='commentaire' disabled>".$ligne['contenu']."</textarea>";
 }
 
 ?>
