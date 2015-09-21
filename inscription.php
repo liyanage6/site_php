@@ -129,7 +129,5 @@ echo $msg; //Affichage des messages
 			</form>
 		</div>
 <?php
-//require_once('inc/footer.inc.php');
+require_once('inc/footer.inc.php');
 ?>
-	</body>
-</html>

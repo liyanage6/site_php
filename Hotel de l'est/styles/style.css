@@ -1,0 +1,1909 @@
+@media screen and (min-width:768px){ /* CSS pour les grand ecrans */
+/*********POLICE********/
+@font-face {
+    font-family: 'Adine Kirnberg Alternate';
+    src: url('AdineKirnberg-Alternate.otf');
+}
+/****Body...****/
+body{
+	margin:0px;
+	padding: 0px;
+	background-color: #000;
+	background: url(../images/bg.jpg) top left repeat;
+	background-attachment: fixed;
+}
+/******** Conteneur *********/
+.conteneur{
+	max-width: 1024px;
+	
+	min-height: 768px;
+	
+	margin-left: auto;
+	margin-right: auto;
+}
+/***** Entete *****/
+header{
+	min-height: 100px;
+	width: auto;
+	background-color: rgba(2, 0, 0, 0.8);
+	background: url(../images/hotelext3.jpg) 50% 30% no-repeat ;
+	border-radius: 8px;
+	border:#C0A028 solid 4px;
+	margin-bottom: 35px;
+
+}
+/******* logo reseau sociaux entete *******/
+header .social{
+	float: left;
+	margin-left: 20px;
+	margin-right: 10px;
+	margin-top: 5px;
+	width: 30px;
+	height: 30px;
+	border: solid black 1px;
+	border-radius: 5px;
+
+}
+/**** LOGO - Etoiles ****/
+header img{
+ 	width: 20%;
+ 	height: 20%;
+ 	float: left;
+ 	margin-left: 30%
+}
+/****** Entete Droite Acceuil Contact Adresse*******/
+header .entete-droite{
+	float: right;
+	margin-right: 10px;
+	margin-top: 20px;
+	font-family: Adine Kirnberg Alternate;
+	text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+
+	font-size: 38px;
+	padding-top: 10px;
+	padding-right: 10px;
+}
+.entete-droite a,
+.entete-droite a:hover,
+.entete-droite a:active,
+.entete-droite a:visited,
+.entete-droite a:link{
+	color: white;
+	text-decoration:none;
+
+}
+.entete-droite a:hover{
+	color: #C0A028; 
+	border-bottom: 2px #C0A028 solid;
+}
+
+/******** titre entete ******/
+header .titre-entete{
+	width: auto;
+	clear: both;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 100px;
+	text-shadow: #000000 2px 1px, #000000 -2px 1px, #000000 -2px -1px, #000000 2px -1px;
+	padding-top: 0px;
+	padding-bottom: 30px;
+	margin-left: 20%;
+	margin-right: 20%;
+	line-height: 80px;
+	text-align: center;
+	text-decoration: none;
+
+}
+header span{
+
+}
+.titre-entete a,
+.titre-entete a:hover,
+.titre-entete a:visited,
+.titre-entete a:link,
+.titre-entete a:active{
+	color: #C0A028;
+	text-decoration: none;
+
+}
+.titre-entete a:hover{
+	color: #C0A028;
+	text-decoration: none;
+}
+.titre-entete a:active{
+	color:#C0A028;
+	text-decoration: none;
+}
+/******* Menu *******/
+nav{
+	width: auto;
+	min-height: 60px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	margin-top: -20px;
+	background-color: rgba(2, 0, 0, 0.8);
+	border-radius: 10px;
+	border: #C0A028 4px solid;
+
+}
+/****** Cellule Menu *******/
+nav li{
+	display: inline-block;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	margin-top: 5px;
+	list-style: none;
+	padding-top: 10px;
+	padding-left: 2px;
+	padding-right: 2px;
+	font-size: 45px;
+	font-family: Adine Kirnberg Alternate;
+	color: black;
+}
+nav li a,
+nav li a:active,
+nav li a:visited,
+nav li a:link,
+nav li a:hover{
+	
+	color: #C0A028;
+	text-decoration:none;
+}
+nav li a:active{
+	color:white;
+}
+nav li a:hover
+{
+	color: #fff;
+	border-bottom: solid #C0A028 1px;
+	
+	padding-top: 10px;
+}
+/**** Titre *****/
+.principal h1{
+	color: #C0A028;
+	text-align: center;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 360%;
+	border-bottom: solid #C0A028 1px;
+	margin-top: 10px;
+}
+
+
+/****** Parti principal du site ********/
+.principal{
+	width: auto;
+	min-height: 900px;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-bottom: 60px;
+	background-color: rgba(2, 0, 0, 0.8);
+	border-radius: 8px;
+	margin-bottom: 35px;
+	padding:1px;
+}
+.textValeur{
+	display: block;
+	color: #fff;
+	padding-left:10px;
+	padding-right: 4px;
+	padding-top: 0px;
+	margin-top: -30px;
+	text-indent: 10px;
+	line-height: 25px;
+	font-size: 20px;
+	text-align: center;
+}
+.titreValeur{
+	
+	font-family:Adine Kirnberg Alternate;
+	color: #C0A028;
+	margin-top: 0px;
+	margin-left: 30%;
+	padding-top: 40px;
+	font-size: 60px;
+	display: inline-block;
+	border-bottom: 1px solid #C0A028;
+}
+/******** Page acceuil - Partie photo reservation *******/
+/****** Section reservation ********/
+.reservation{
+	width: 210px;
+	min-height: 255px;
+	border: solid #C0A028 1px;
+	float: left;
+	margin: 1px;
+	margin-top: 80px;
+	color:white;
+	background-color: rgba(2, 0, 0, 0.4);
+}
+.reservation label{
+	padding-left: 4px;
+}
+.reservation select,
+.reservation input{
+	margin-left: 4px;
+}
+.resaTitre{
+	color: white;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 300%;
+	border: #C0A028 solid 1px;
+	text-align: center;
+	width: 210px;
+	text-decoration: none;
+	color: #C0A028;
+	margin-bottom: -77px;
+	margin-left: 1px;
+	padding-top: 10px;
+	background-color: rgba(2, 0, 0, 0.4);
+
+}
+.reservation form input,
+.reservation form select{
+	margin-left: 20px;
+}
+/******** section photo "defilante" ********/
+.photoseminaire{
+	min-height: 300px;
+	width: 100%;
+	
+	float: left;
+}
+
+/********   
+			Carousel Photo  
+							********/
+#owl-demo{
+max-width: 99.9%;
+height: 300px;
+float: left;
+margin-left: 1px;
+display: block;
+
+}
+#owl-demo .item img{
+    display:block;
+    width:100%;
+    height: 300px;
+
+    }
+#owl-demo-seminaire{
+width: 100%;
+min-height: 200px;
+float: left;
+border: solid 1px #C0A028;
+}
+#owl-demo-seminaire .item img{
+	display:block;
+    width:100%;
+    height: 300px;
+}
+
+/********* Page Acceuil chambres ***********/
+.principal .chambres{
+	width: 400px;
+	min-height: 430px;
+	float: left;	
+	padding-top: 10px;
+	margin-top: 80px;
+	margin-left: 70px;
+	border: solid #C0A028 1px;
+	color: white;
+	background-color: rgba(2, 0, 0, 0.4);
+
+}
+.imgchambre{
+	width: 399px;
+	height: 300px;
+	border: solid #C0A028 1px;
+}
+.imgchambre img{
+	width: 100%;
+	height: 100%;
+}
+.titrechambres{
+	text-align: center;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 40px;
+}
+.chambres a,
+.chambres a:hover,
+.chambres a:active,
+.chambres a:visited,
+.chambres a:link{
+	color: #C0A028;
+	text-decoration:none;
+
+}
+.chambres a:hover{
+	color: #C0A028;
+	text-decoration: underline;
+}
+.chambres p{
+	padding-left:10px;
+	padding-right: 4px;
+	text-indent: 10px;
+	line-height: 25px;
+	font-size: 20px;
+}
+
+/******* Cellule d'information ********/
+.bloc{
+	
+	
+	margin-top: 10px;
+	width: 100%;
+	min-height: 100px;
+	
+	display: inline-block;
+	vertical-align: center;
+	overflow: hidden;
+
+}
+/******** Page Seminaire -
+			 Page par TypeDeChambre  ***********/
+table{
+	margin-left: 20px;
+	margin-top: 50px;
+	float: left;
+}
+.description th{
+	padding-top: 10px;
+	color: #C0A028;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 300%;
+	border: solid #C0A028 1px;
+	text-align: center;
+	width: 300px;
+	background-color: rgba(2, 0, 0, 0.4);
+}
+.prix th{
+	padding-top: 10px;
+	color: #C0A028;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 300%;
+	border: solid #C0A028 1px;
+	text-align: center;
+	width: 300px;
+	background-color: rgba(2, 0, 0, 0.4);
+}
+.description{
+	border:solid 1px #C0A028;
+}
+.description img{
+	width: 100%;
+	height: 250px;
+}
+table a,
+table a:hover,
+table a:active,
+table a:link,
+table a:visited{
+	color:#C0A028;
+	text-decoration: none;
+}
+.bloc .reservation{
+	width: 300px;
+	min-height: 300px;
+	margin-top: 1px;
+	margin-left: 20px;
+	padding-top: 1px;
+	border: solid #C0A028 1px;
+	color: white;
+	float: left;
+	margin-bottom: 80px;
+	background-color: rgba(2, 0, 0, 0.4);
+	overflow: hidden;
+}
+.bloc .prix,
+.bloc .description{
+	width: 300px;
+	min-height: 300px;
+	margin-top: 1px;
+	margin-left: 20px;
+	border: solid #C0A028 1px;
+	color: white;
+	float: left;
+	margin-bottom: 80px;
+	background-color: rgba(2, 0, 0, 0.4);
+	overflow: hidden;
+}
+.bloc .description{
+	float: left;
+	
+}
+
+
+.bloc .titrereservation{
+	color: #C0A028;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 300%;
+	border: solid #C0A028 1px;
+	text-align: center;
+	width: 294px;
+	padding-top: 10px;
+	background-color: rgba(2, 0, 0, 0.4);
+	margin: 2px;
+	
+}
+.titredescription{
+	color: #C0A028;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 300%;
+	border: solid #C0A028 1px;
+	text-align: center;
+	width: 300px;
+	margin-top: -57px;
+	margin-bottom: 4px;
+	margin-left: 20px;
+	float: left;
+	background-color: rgba(2, 0, 0, 0.4);
+}
+.titreprix {
+	color: #C0A028;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 300%;
+	border: solid #C0A028 1px;
+	text-align: center;
+	width: 300px;
+	margin-top: -56px;
+	margin-bottom: 4px;
+	margin-left: 20px;
+	float: left;
+	overflow: hidden;
+	background-color: rgba(2, 0, 0, 0.4);
+}
+.prix p{
+	padding-left:10px;
+	padding-right: 4px;
+	text-indent: 10px;
+	line-height: 25px;
+	font-size: 20px;
+}
+.prix li{
+	font-size: 18px;
+}
+.bloc form input{
+	margin-left: 40px;
+}
+
+/*********** Page Services ************/
+.bloc .service{
+	width: 225px;
+	min-height: 200px;
+	float: left;
+	margin-top: 40px;
+	margin-left: 10%;
+	color: white;
+	border: 1px solid #C0A028;
+}
+.imgservice{
+	width: 225px;
+	height: 200px;
+
+}
+.imgservice img{
+	width: 100%;
+	height: 100%;
+}
+.titreservice{
+	text-align: center;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 50px;
+}
+
+/******* Page Restaurant *******/
+.bloc .menu{
+	width: 300px;
+	min-height: 800px;
+	float: left;
+	margin-top: 40px;
+	margin-left: 3%;
+	border: solid #C0A028 1px;
+	color: white;
+	background-color: rgba(2, 0, 0, 0.4);
+}
+.imgmenu{
+	width: 300px;
+	height: 200px;
+	border: solid #C0A028 1px;
+}
+.imgmenu img{
+	width: 100%;
+	height: 100%;
+}
+.titremenu{
+	text-align: center;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 50px;
+	border-bottom: solid 1px #C0A028;
+}
+.menu p{
+	padding-left:10px;
+	padding-right: 4px;
+	margin-top: -40px;
+	text-indent: 10px;
+	line-height: 25px;
+	font-size: 20px;
+	text-align: center;
+}
+.menu h3{
+	margin-left: 2px;
+	border-bottom: 1px #C0A028 dashed;
+	text-align: center;
+	color: #C0A028;
+	font-size: 50px;
+	font-family:Adine Kirnberg Alternate;
+}
+
+/******** Page acceuil - Principal Bas - 
+			Seminaire Restaurant Service *********/
+.principal-bas{
+	width: auto;
+	min-height: 500px;
+	clear: both;
+	overflow: hidden;
+}
+.principal-bas .seminaire{
+	width: 100px;
+	height: 300px;
+
+	float: left;
+	margin-left: 20px;
+	margin-top: 20px;
+
+
+}
+.seminaire img{
+	width: 100px;
+	height: 100px;
+	border: solid #C0A028 1px;
+}
+.titreseminaire{
+	color: #C0A028;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 300%;
+	border: #C0A028 solid 1px;
+	text-align: center;
+	width: 200px;
+	margin-top: 30px;
+	margin-left: 15%;
+	padding-top: 10px;
+	background-color: rgba(2, 0, 0, 0.4);
+}
+.principal-bas a,
+.principal-bas a:link,
+.principal-bas a:visited,
+.principal-bas a:active,
+.principal-bas a:hover{
+	text-decoration: none;
+}
+
+.principal-bas a:hover{
+	
+	color: white;
+}
+
+/********** Emplacement Géographique ************/
+.emplacement{
+	width: 950px;
+	min-height: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 50px;
+
+}
+.titreemplacement{
+	color: #C0A028;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 60px;
+	text-align: center;
+	border-bottom: 1px solid #C0A028;
+}
+
+.emplacement img{
+	width: 100%;
+	height: 100%;
+	display: block;	
+}
+.imgemplacement{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: solid 1px #000;
+}
+/******* Pied de page *******/
+.pied2page{
+	margin-top: 0px;
+	font-size: 30px;
+	line-height: 0px;
+	padding-top: -10px;
+	width: 150px;
+	height: 100px;
+	
+	font-family:  Adine Kirnberg Alternate;
+}
+.pied2page td{
+	padding-top: 4px;
+}
+footer{
+	width: auto;
+	min-height: 200px;
+	background-color: rgba(2, 0, 0, 0.8);
+	margin-top: 40px;
+	clear: both;
+	border-radius: 8px;
+	border:#C0A028 solid 4px;
+	margin-bottom: 35px;
+}
+		/******* logo reseau sociaux entete *******/
+footer .social{
+	float: right;
+	margin-left: 20px;
+	margin-right: 10px;
+	margin-top: 60px;
+	width: 30px;
+	height: 3	0px;
+
+}
+.entete-adresse{  /****		Pied de page adresse		***/
+	color: #C0A028;
+	
+	margin-left: 20%;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 50px;
+	display: inline-block;
+}
+.mentionlegales{
+	color:white;
+	text-align: left;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+}
+	/****** Entete Droite Acceuil Contact *******/
+/*footer .entete-droite{
+	float: left;
+	margin-right: 10px;
+	margin-top: 20px;
+	margin-left: 10px;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 38px;
+	width: 80px;
+	height: 50px;
+	padding-top: 10px;
+	padding-right: 10px;
+}*/
+
+
+
+
+	/***************************************************************************************
+											Responsive Design
+	*****************************************************************************************/
+
+@media screen and (max-width:800px) and (min-width:500px) {  /* CSS pour les moyen ecrans */
+
+ /*********POLICE********/
+@font-face {
+    font-family: 'Adine Kirnberg Alternate';
+    src: url('AdineKirnberg-Alternate.otf');
+}
+/****Body...****/
+body{
+	max-width: 768px;
+	
+	height: auto;
+	background: url(../images/bg.jpg) top left repeat ;
+	background-attachment: fixed;
+	margin:0px;
+	padding: 0px;
+}
+/******** Conteneur *********/
+.conteneur{
+	max-width: 768px;
+	
+	margin-left: auto;
+	margin-right: auto;
+}
+/***** Entete *****/
+header{
+	min-height: 250px;
+	width: auto;
+	background-color: rgba(2, 0, 0, 0.8);
+	background: url(../images/hotelext3.jpg) 50% 30%;
+}
+/******* logo reseau sociaux entete *******/
+header .social{
+	float: left;
+	margin-left: 20px;
+	margin-right: 10px;
+	margin-top: 5px;
+	width: 6%;
+	height: 6%;
+	text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+
+
+}
+/**** LOGO - Etoiles ****/
+header img{
+ 	width: 20%;
+ 	height: 20%;
+ 	float: left;
+ 	margin-left: 24%
+}
+/****** Entete Droite Acceuil Contact Adresse*******/
+header .entete-droite{
+	float: right;
+	margin-right: 10px;
+	margin-top: 20px;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 38px;
+	padding-top: 10px;
+	padding-right: 10px;
+	text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+
+}
+.entete-droite a,
+.entete-droite a:hover,
+.entete-droite a:active,
+.entete-droite a:visited,
+.entete-droite a:link{
+	color: white;
+	text-decoration:none;
+
+}
+.entete-droite a:hover{
+	color: #C0A028; 
+	text-decoration: underline;
+}
+
+/******** titre entete ******/
+header .titre-entete{
+	width: auto;
+	clear: both;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 80px;
+	line-height: 80px;
+	padding-top: 0px;
+	margin-left: 20%;
+	margin-right: 20%;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+
+
+}
+.titre-entete a,
+.titre-entete a:hover,
+.titre-entete a:visited,
+.titre-entete a:link,
+.titre-entete a:active{
+	color: #C0A028;
+	text-decoration: none;
+
+}
+.titre-entete a:hover{
+	color: #C0A028;
+	text-decoration: none;
+}
+.titre-entete a:active{
+	color:#C0A028;
+	text-decoration: none;
+}
+/******* Menu *******/
+nav{
+	width: auto;
+	min-height: 60px;
+	
+	text-align: center;
+	margin-top: -20px;
+	background-color: rgba(2, 0, 0, 0.8);
+	
+
+}
+/****** Cellule Menu *******/
+nav li{
+	display: inline-block;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	margin-top: 5px;
+	list-style: none;
+	padding-top: 10px;
+	padding-left: 2px;
+	padding-right: 2px;
+	font-size: 45px;
+	font-family: Adine Kirnberg Alternate;
+	color: black;
+}
+nav a,
+nav a:active,
+nav a:visited,
+nav a:link,
+nav a:hover{
+	border-bottom: solid white 1px;
+	color: white;
+	text-decoration:none;
+}
+nav a:hover{
+	color: #C0A028;
+	border-bottom: solid #C0A028 1px;
+	
+	padding-top: 10px;
+
+}
+/**** Titre *****/
+.principal h1{
+	color: #C0A028;
+	text-align: center;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 360%;
+	border-bottom: solid #C0A028 1px;
+	margin-top: 0px;
+	padding-top: 10px;
+}
+
+/****** Parti principal du site ********/
+.principal{
+	width: auto;
+	min-height: 400px;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: rgba(2, 0, 0, 0.8);
+}
+.textValeur{
+	display: block;
+	color: #fff;
+	padding-left:10px;
+	padding-right: 4px;
+	padding-top: 0px;
+	margin-top: -60px;
+	text-indent: 10px;
+	line-height: 25px;
+	font-size: 20px;
+	text-align: center;
+
+	display: ;
+}
+.titreValeur{
+	text-align: center;
+	font-family:Adine Kirnberg Alternate;
+	color: #C0A028;
+	margin-top: 10px;
+	margin-left: 22%;
+	font-size: 60px;
+	display: inline-block;
+
+	display: ;
+
+}
+
+/******** Page acceuil - Partie photo reservation *******/
+/****** Section reservation ********/
+.reservation{
+	width: 210px;
+	min-height: 255px;
+	border: solid #C0A028 1px;
+	float: left;
+	margin: 1px;
+	margin-top: 80px;
+	color:white;
+	background-color: rgba(2, 0, 0, 0.4);
+}
+.reservation label{
+	padding-left: 4px;
+}
+.reservation select,
+.reservation input{
+	margin-left: 4px;
+}
+.resaTitre{
+	color: white;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 300%;
+	border: #C0A028 solid 1px;
+	text-align: center;
+	width: 210px;
+	text-decoration: none;
+	color: #C0A028;
+	margin-bottom: -47px;
+	margin-left: 1px;
+	padding-top: 10px;
+	background-color: rgba(2, 0, 0, 0.4);
+
+}
+/******** section photo "defilante" ********/
+.photoseminaire{
+	min-height: 300px;
+	width: 100%;
+	
+	float: left;
+}
+
+/********   
+			Carousel Photo  
+							********/
+#owl-demo{
+width: 99.5%;
+height: auto;
+float: left;
+border:solid 1px #C0A028;
+margin-left: 1px;
+
+}
+#owl-demo .item img{
+    display:block;
+    width:100%;
+    height: 300px;
+
+    }
+#owl-demo-seminaire{
+width: 99.5%;
+min-height: 200px;
+float: left;
+border: solid 1px #C0A028;
+}
+#owl-demo-seminaire .item img{
+	display:block;
+    width:100%;
+    height: 300px;
+}
+
+/********* Page Acceuil chambres ***********/
+.principal .chambres{
+	width: 400px;
+	min-height: 430px;
+	float: left;
+	margin-top: 40px;
+	margin-left: 16%;
+	border: solid #C0A028 1px;
+	color: white;
+	background-color: rgba(2, 0, 0, 0.4);
+
+}
+.imgchambre{
+	width: 399px;
+	height: 300px;
+	border: solid #C0A028 1px;
+}
+.imgchambre img{
+	width: 100%;
+	height: 100%;
+}
+.titrechambres{
+	text-align: center;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 40px;
+}
+.chambres a,
+.chambres a:hover,
+.chambres a:active,
+.chambres a:visited,
+.chambres a:link{
+	color: #C0A028;
+	text-decoration:none;
+
+}
+.chambres a:hover{
+	color: #C0A028;
+	text-decoration: underline;
+}
+.chambres p{
+	padding-left:10px;
+	padding-right: 4px;
+	text-indent: 10px;
+	line-height: 25px;
+	font-size: 20px;
+}
+
+/******* Cellule d'information ********/
+.bloc{
+	
+	
+	margin-top: 10px;
+	width: 100%;
+	min-height: 100px;
+	
+	display: inline-block;
+	vertical-align: center;
+	overflow: hidden;
+
+}
+/******** Page Seminaire -
+			 Page par TypeDeChambre  ***********/
+table{
+	margin-left: 5%;
+	margin-top: 50px;
+	;
+}
+.description th{
+	padding-top: 10px;
+	color: #C0A028;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 300%;
+	border: solid #C0A028 1px;
+	text-align: center;
+	width: 300px;
+	background-color: rgba(2, 0, 0, 0.4);
+}
+.prix th{
+	padding-top: 10px;
+	color: #C0A028;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 300%;
+	border: solid #C0A028 1px;
+	text-align: center;
+	width: 300px;
+	background-color: rgba(2, 0, 0, 0.4);
+}
+.description{
+	border:solid 1px #C0A028;
+}
+.description img{
+	width: 100%;
+	height: 250px;
+}
+table a,
+table a:hover,
+table a:active,
+table a:link,
+table a:visited{
+	color:#C0A028;
+	text-decoration: none;
+}
+table a:hover{
+	color: #C0A028;
+	text-decoration: underline;
+}
+.bloc .reservation,
+.bloc .prix,
+.bloc .description{
+	max-width: 300px;
+	min-height: 300px;
+	margin-top: 1px;
+	margin-left: 20px;
+	border: solid #C0A028 1px;
+	color: white;
+	float: left;
+	margin-bottom: 80px;
+	background-color: rgba(2, 0, 0, 0.4);
+	overflow: hidden;
+}
+.bloc .reservation{
+	padding-top: 1px;
+}
+.bloc .description{
+	float: left;
+	
+}
+
+
+.bloc .titrereservation{
+	color: #C0A028;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 300%;
+	border: solid #C0A028 1px;
+	text-align: center;
+	width: 294px;
+	padding-top: 10px;
+	background-color: rgba(2, 0, 0, 0.4);
+	margin: 2px;
+	width: auto;
+}
+.titredescription{
+	color: #C0A028;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 300%;
+	border: solid #C0A028 1px;
+	text-align: center;
+	width: 300px;
+	margin-top: -57px;
+	margin-bottom: 4px;
+	margin-left: 20px;
+	float: left;
+	background-color: rgba(2, 0, 0, 0.4);
+}
+.titreprix {
+	color: #C0A028;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 300%;
+	border: solid #C0A028 1px;
+	text-align: center;
+	width: 300px;
+	margin-top: -56px;
+	margin-bottom: 4px;
+	margin-left: 20px;
+	float: left;
+	overflow: hidden;
+	background-color: rgba(2, 0, 0, 0.4);
+}
+.prix p{
+	padding-left:10px;
+	padding-right: 4px;
+	text-indent: 10px;
+	line-height: 25px;
+	font-size: 20px;
+}
+.prix li{
+	font-size: 18px;
+}
+
+.principal-bas .description{
+	margin-left: 170px;
+}
+/*********** Page Services ************/
+.bloc .service{
+	width: 225px;
+	min-height: 200px;
+	float: left;
+	margin-top: 40px;
+	margin-left: 10%;
+	color: white;
+	border: 1px solid #C0A028;
+}
+.imgservice{
+	width: 225px;
+	height: 200px;
+
+}
+.imgservice img{
+	width: 100%;
+	height: 100%;
+}
+.titreservice{
+	text-align: center;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 50px;
+}
+
+/******* Page Restaurant *******/
+.bloc .menu{
+	width: 300px;
+	min-height: 800px;
+	float: left;
+	margin-top: 40px;
+	margin-left: 3%;
+	border: solid #C0A028 1px;
+	color: white;
+	background-color: rgba(2, 0, 0, 0.4);
+}
+.imgmenu{
+	width: 300px;
+	height: 200px;
+	border: solid #C0A028 1px;
+}
+.imgmenu img{
+	width: 100%;
+	height: 100%;
+}
+.titremenu{
+	text-align: center;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 50px;
+	border-bottom: solid 1px #C0A028;
+}
+.menu p{
+	padding-left:10px;
+	padding-right: 4px;
+	margin-top: -40px;
+	text-indent: 10px;
+	line-height: 25px;
+	font-size: 20px;
+	text-align: center;
+}
+.menu h3{
+	margin-left: 2px;
+	text-decoration: underline;
+	text-align: center;
+	color: #C0A028;
+	font-size: 50px;
+	font-family:Adine Kirnberg Alternate;
+}
+
+/******** Page acceuil - Principal Bas - 
+			Seminaire Restaurant Service *********/
+.principal-bas{
+	width: auto;
+	min-height: 500px;
+	clear: both;
+	overflow: hidden;
+}
+
+
+/********** Emplacement Géographique ************/
+.emplacement{
+	width: 950px;
+	min-height: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 50px;
+
+	display: none;
+}
+.titreemplacement{
+	color: #C0A028;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 60px;
+	text-align: center;
+
+	text-decoration: underline;
+}
+
+.emplacement img{
+	width: 100%;
+	height: 100%;
+	display: block;	
+}
+.imgemplacement{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: solid 1px #000;
+}
+/******* Pied de page *******/
+.pied2page{
+	margin-top: 0px;
+	font-size: 30px;
+	line-height: 0px;
+	padding-top: -10px;
+	margin-left: 0px;
+	width: 150px;
+	height: 100px;
+	
+	font-family:  Adine Kirnberg Alternate;
+}
+.pied2page td{
+	padding-top: 4px;
+}
+footer{
+	width: auto;
+	min-height: 200px;
+	background-color: rgba(2, 0, 0, 0.8);
+	margin-top: 40px;
+	clear: both;
+}
+		/******* logo reseau sociaux entete *******/
+footer .social{
+	float: right;
+	margin-left: 20px;
+	margin-right: 10px;
+	margin-top: 5px;
+	width: 6%;
+	height: 6%;
+
+}
+.entete-adresse{  /****		Pied de page adresse		***/
+	color: #C0A028;
+	
+	margin-left: 15%;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 50px;
+	display: inline-block;
+}
+.mentionlegales{
+	color:white;
+	text-align: left;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+}	/****	Fin des screen moyen ****/
+
+
+
+
+	/***************************************************************************************
+											Responsive Design
+	*****************************************************************************************/
+
+@media screen and (max-width:500px){   /* CSS pour les petit ecrans */
+ /*********POLICE********/
+@font-face {
+    font-family: 'Adine Kirnberg Alternate';
+    src: url('AdineKirnberg-Alternate.otf');
+}
+/****Body...****/
+body{
+	max-width: 768px;
+	
+	height: auto;
+	background: url(../images/bg.jpg) top left repeat ;
+	background-attachment: fixed;
+	margin:0px;
+	padding: 0px;
+}
+/******** Conteneur *********/
+.conteneur{
+	max-width: 768px;
+	
+	margin-left: auto;
+	margin-right: auto;
+}
+/***** Entete *****/
+header{
+	min-height: 250px;
+	width: auto;
+	background-color: rgba(2, 0, 0, 0.8);
+}
+/******* logo reseau sociaux entete *******/
+header .social{
+	float: left;
+	margin-left: 20px;
+	margin-right: 10px;
+	margin-top: 5px;
+	width: 6%;
+	height: 6%;
+
+}
+/**** LOGO - Etoiles ****/
+header img{
+ 	width: 250px;
+ 	height: 250px;
+ 	margin-left: 24%;
+ 	float: left;
+
+}
+/****** Entete Droite Acceuil Contact Adresse*******/
+header .entete-droite{
+	float: right;
+	margin-right: 10px;
+	margin-top: 20px;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 38px;
+	padding-top: 10px;
+	padding-right: 10px;
+}
+.entete-droite a,
+.entete-droite a:hover,
+.entete-droite a:active,
+.entete-droite a:visited,
+.entete-droite a:link{
+	color: white;
+	text-decoration:none;
+
+}
+.entete-droite a:hover{
+	color: #C0A028; 
+	text-decoration: underline;
+}
+
+/******** titre entete ******/
+header .titre-entete{
+	width: auto;
+	clear: both;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 60px;
+	line-height: 80px;
+	padding-top: 0px;
+	margin-left: 20%;
+	margin-right: 20%;
+	text-align: center;
+	text-decoration: none;
+
+}
+.titre-entete a,
+.titre-entete a:hover,
+.titre-entete a:visited,
+.titre-entete a:link,
+.titre-entete a:active{
+	color: #C0A028;
+	text-decoration: none;
+
+}
+.titre-entete a:hover{
+	color: #C0A028;
+	text-decoration: none;
+}
+.titre-entete a:active{
+	color:#C0A028;
+	text-decoration: none;
+}
+/******* Menu *******/
+nav{
+	width: auto;
+	min-height: 60px;
+	
+	text-align: center;
+	margin-top: -20px;
+	background-color: rgba(2, 0, 0, 0.8);
+	
+
+}
+/****** Cellule Menu *******/
+nav li{
+	display: inline-block;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	margin-top: 5px;
+	list-style: none;
+	padding-top: 10px;
+	padding-left: 2px;
+	padding-right: 2px;
+	font-size: 45px;
+	font-family: Adine Kirnberg Alternate;
+	color: black;
+}
+nav a,
+nav a:active,
+nav a:visited,
+nav a:link,
+nav a:hover{
+	border-bottom: solid white 1px;
+	color: white;
+	text-decoration:none;
+}
+nav a:hover{
+	color: #C0A028;
+	border-bottom: solid #C0A028 1px;
+	
+	padding-top: 10px;
+
+}
+/**** Titre *****/
+.principal h1{
+	color: #C0A028;
+	text-align: center;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 360%;
+	border-bottom: solid #C0A028 1px;
+	margin-top: 0px;
+	padding-top: 10px;
+}
+
+/****** Parti principal du site ********/
+.principal{
+	width: auto;
+	min-height: 400px;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-bottom: 30px;
+	background-color: rgba(2, 0, 0, 0.8);
+}
+.textValeur{
+	display: block;
+	color: #fff;
+	padding-left:10px;
+	padding-right: 4px;
+	padding-top: 0px;
+	margin-top: -60px;
+	text-indent: 10px;
+	line-height: 25px;
+	font-size: 20px;
+	text-align: center;
+
+	display: ;
+}
+.titreValeur{
+	text-align: center;
+	font-family:Adine Kirnberg Alternate;
+	color: #C0A028;
+	margin-top: 60px;
+	margin-left: 22%;
+	font-size: 60px;
+	display: inline-block;
+
+	display: ;
+
+}
+
+/******** Page acceuil - Partie photo reservation *******/
+/****** Section reservation ********/
+.reservation{
+	width: 210px;
+	min-height: 255px;
+	border: solid #C0A028 1px;
+	float: left;
+	margin: 1px;
+	margin-top: 80px;
+	color:white;
+	background-color: rgba(2, 0, 0, 0.4);
+}
+.reservation label{
+	padding-left: 4px;
+}
+.reservation select,
+.reservation input{
+	margin-left: 4px;
+}
+.resaTitre{
+	color: white;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 300%;
+	border: #C0A028 solid 1px;
+	text-align: center;
+	width: 210px;
+	text-decoration: none;
+	color: #C0A028;
+	margin-bottom: -47px;
+	margin-left: 1px;
+	padding-top: 10px;
+	background-color: rgba(2, 0, 0, 0.4);
+
+}
+/******** section photo "defilante" ********/
+.photoseminaire{
+	min-height: 300px;
+	width: 100%;
+	
+	float: left;
+}
+
+/********   
+			Carousel Photo  
+							********/
+#owl-demo{
+width: 99.2%;
+height: auto;
+float: left;
+border:solid 1px #C0A028;
+margin-left: 1px;
+
+}
+#owl-demo .item img{
+    display:block;
+    width:99.2%;
+    height: 300px;
+
+    }
+#owl-demo-seminaire{
+width: 99.5%;
+min-height: 200px;
+float: left;
+border: solid 1px #C0A028;
+}
+#owl-demo-seminaire .item img{
+	display:block;
+    width:100%;
+    height: 300px;
+}
+
+/********* Page Acceuil chambres ***********/
+.principal .chambres{
+	width: auto;
+	min-height: 430px;
+	float: left;
+	margin-top: 40px;
+	margin-left: 10%;
+	margin-right: 10%;
+	border: solid #C0A028 1px;
+	color: white;
+	background-color: rgba(2, 0, 0, 0.4);
+
+}
+.imgchambre{
+	width: auto;
+	height: 300px;
+	border: solid #C0A028 1px;
+}
+.imgchambre img{
+	width: 100%;
+	height: 100%;
+}
+.titrechambres{
+	text-align: center;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 40px;
+}
+.chambres a,
+.chambres a:hover,
+.chambres a:active,
+.chambres a:visited,
+.chambres a:link{
+	color: #C0A028;
+	text-decoration:none;
+
+}
+.chambres a:hover{
+	color: #C0A028;
+	text-decoration: underline;
+}
+.chambres p{
+	padding-left:10px;
+	padding-right: 4px;
+	text-indent: 10px;
+	line-height: 25px;
+	font-size: 20px;
+}
+
+/******* Cellule d'information ********/
+.bloc{
+	
+	
+	margin-top: 10px;
+	width: 100%;
+	min-height: 100px;
+	
+	display: inline-block;
+	vertical-align: center;
+	overflow: hidden;
+
+}
+/******** Page Seminaire -
+			 Page par TypeDeChambre  ***********/
+table{
+	margin-left: 5%;
+	margin-top: 50px;
+	float: left;
+}
+.description th{
+	padding-top: 10px;
+	color: #C0A028;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 300%;
+	border: solid #C0A028 1px;
+	text-align: center;
+	width: 300px;
+	background-color: rgba(2, 0, 0, 0.4);
+}
+.prix th{
+	padding-top: 10px;
+	color: #C0A028;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 300%;
+	border: solid #C0A028 1px;
+	text-align: center;
+	width: 300px;
+	background-color: rgba(2, 0, 0, 0.4);
+}
+.description{
+	border:solid 1px #C0A028;
+}
+.description img{
+	width: 100%;
+	height: 250px;
+}
+table a,
+table a:hover,
+table a:active,
+table a:link,
+table a:visited{
+	color:#C0A028;
+	text-decoration: none;
+}
+table a:hover{
+	color: #C0A028;
+	text-decoration: underline;
+}
+.bloc .reservation,
+.bloc .prix,
+.bloc .description{
+	width: auto;
+	min-height: 300px;
+	margin-top: 1px;
+	margin-left: 50px;
+	border: solid #C0A028 1px;
+	color: white;
+	float: left;
+	margin-bottom: 80px;
+	background-color: rgba(2, 0, 0, 0.4);
+	overflow: hidden;
+}
+.bloc .reservation{
+	padding-top: 1px;
+	width: auto;
+}
+.bloc .description{
+	float: left;
+	
+}
+
+
+.bloc .titrereservation{
+	color: #C0A028;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 300%;
+	border: solid #C0A028 1px;
+	text-align: center;
+	width: 294px;
+	padding-top: 10px;
+	background-color: rgba(2, 0, 0, 0.4);
+	margin: 2px;
+	width: auto;
+	
+}
+.titredescription{
+	color: #C0A028;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 300%;
+	border: solid #C0A028 1px;
+	text-align: center;
+	width: 300px;
+	margin-top: -57px;
+	margin-bottom: 4px;
+	margin-left: 20px;
+	float: left;
+	background-color: rgba(2, 0, 0, 0.4);
+}
+.titreprix {
+	color: #C0A028;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 300%;
+	border: solid #C0A028 1px;
+	text-align: center;
+	width: 300px;
+	margin-top: -56px;
+	margin-bottom: 4px;
+	margin-left: 20px;
+	float: left;
+	overflow: hidden;
+	background-color: rgba(2, 0, 0, 0.4);
+}
+.prix p{
+	padding-left:10px;
+	padding-right: 4px;
+	text-indent: 10px;
+	line-height: 25px;
+	font-size: 20px;
+}
+.prix li{
+	font-size: 18px;
+}
+
+/*********** Page Services ************/
+.bloc .service{
+	width: 225px;
+	min-height: 200px;
+	float: left;
+	margin-top: 40px;
+	margin-left: 10%;
+	color: white;
+	border: 1px solid #C0A028;
+}
+.imgservice{
+	width: 225px;
+	height: 200px;
+
+}
+.imgservice img{
+	width: 100%;
+	height: 100%;
+}
+.titreservice{
+	text-align: center;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 50px;
+}
+
+/******* Page Restaurant *******/
+.bloc .menu{
+	width: 300px;
+	min-height: 800px;
+	float: left;
+	margin-top: 40px;
+	margin-left: 14%;
+	border: solid #C0A028 1px;
+	color: white;
+	background-color: rgba(2, 0, 0, 0.4);
+}
+.imgmenu{
+	width: 300px;
+	height: 200px;
+	border: solid #C0A028 1px;
+}
+.imgmenu img{
+	width: 100%;
+	height: 100%;
+}
+.titremenu{
+	text-align: center;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 50px;
+	border-bottom: solid 1px #C0A028;
+}
+.menu p{
+	padding-left:10px;
+	padding-right: 4px;
+	margin-top: -40px;
+	text-indent: 10px;
+	line-height: 25px;
+	font-size: 20px;
+	text-align: center;
+}
+.menu h3{
+	margin-left: 2px;
+	text-decoration: underline;
+	text-align: center;
+	color: #C0A028;
+	font-size: 50px;
+	font-family:Adine Kirnberg Alternate;
+}
+
+/******** Page acceuil - Principal Bas - 
+			Seminaire Restaurant Service *********/
+.principal-bas{
+	width: auto;
+	min-height: 500px;
+	clear: both;
+	overflow: hidden;
+}
+.principal-bas .description{
+	width: 150px;
+	height: 150px;
+	margin-left: 2px;
+}
+.principal-bas .description img{
+	width: 149px;
+	height: 149px;
+}
+
+/********** Emplacement Géographique ************/
+.emplacement{
+	width: 950px;
+	min-height: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 50px;
+
+	display: none;
+}
+.titreemplacement{
+	color: #C0A028;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 60px;
+	text-align: center;
+
+	text-decoration: underline;
+}
+
+.emplacement img{
+	width: 100%;
+	height: 100%;
+	display: block;	
+}
+.imgemplacement{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: solid 1px #000;
+}
+/******* Pied de page *******/
+.pied2page{
+	margin-top: 0px;
+	font-size: 30px;
+	line-height: 0px;
+	padding-top: -10px;
+	margin-left: 0px;
+	width: 150px;
+	height: 100px;
+	
+	font-family:  Adine Kirnberg Alternate;
+}
+.pied2page td{
+	padding-top: 4px;
+}
+footer{
+	width: auto;
+	min-height: 200px;
+	background-color: rgba(2, 0, 0, 0.8);
+	margin-top: 40px;
+	clear: both;
+}
+		/******* logo reseau sociaux entete *******/
+footer .social{
+	float: right;
+	margin-left: 20px;
+	margin-right: 10px;
+	margin-top: 5px;
+	width: 6%;
+	height: 6%;
+
+}
+.entete-adresse{  /****		Pied de page adresse		***/
+	color: #C0A028;
+	
+	margin-left: 15%;
+	font-family: Adine Kirnberg Alternate;
+	font-size: 50px;
+	display: inline-block;
+}
+.mentionlegales{
+	color:white;
+	text-align: left;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+}	/****	Fin des screen petit ****/
+
+

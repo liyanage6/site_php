@@ -1,0 +1,212 @@
+<!doctype html>
+<html> 
+<head>
+		<title>Hôtel de l'Est</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="styles/style.css"/>
+	<link rel="stylesheet" type="text/css" href="styles/jquery/jquery-ui.css"/>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<!-- Important Owl stylesheet -->
+    <link rel="stylesheet" href="styles/owl.carousel.css">
+     
+    <!-- Default Theme -->
+    <link rel="stylesheet" href="styles/owl.theme.css">
+     
+    <!-- Include js plugin -->
+    <script src="js/owl.carousel.js"></script>
+  
+	<style>
+	</style>
+</head>
+<body>	
+	<div class="conteneur">
+
+		<header>
+			<a href="">
+				<img class="social" src="images/icone-facebook.png" alt="icone faceook">
+			</a>
+			<a href="">
+				<img class="social" src="images/icon-twiter.png" alt="icone twiter">
+			</a>
+			
+
+			<p class="entete-droite"><a href="contact.html"> Contact </a></p>
+			<p class="entete-droite"><a href="index.html"> Acceuil </a></p>
+			<a href="index.html"><img class="logoHE" src="images/HE-logo.png" alt="logo hotel de l'est"></a>
+				<h1 class="titre-entete"><a href="index.html">Hotel de <span>l ' Est</span> </a></h1>
+			
+			
+		</header>
+		<nav>
+			<ul>
+				<li><a href="chambres.html" >Chambres</a></li>
+				<li><a href="seminaire.html" >Séminaire</a></li>
+				<li><a href="restaurant.html" >Restaurant</a></li>
+				<li><a href="services.html" >Service</a></li>		
+			</ul>
+		</nav>
+		<div class="principal">
+			<h1>Chambre Famille</h1>
+			<div class="photoseminaire">
+				<!-- Carousel photo-->
+				    <div id="owl-demo-seminaire" class="owl-carousel owl-theme">
+				     
+					    <div class="item"><img src="images/chambrefamille2.jpg" alt=""></div>
+					    <div class="item"><img src="images/chambrefamille3.jpg" alt=""></div>
+					    <div class="item"><img src="images/chambrefamille4.jpg" alt=""></div>
+					    
+					</div>
+			</div>
+			
+			<div class="bloc">
+				<div class="reservation">
+				<h1 class="titrereservation">Reservation</h1>
+					<form >
+						<br>
+						<label>Date d'arrivée</label>
+						<br>
+						 <input type="text" id="datepicker" class="datepicker"><br><br>
+						<label >Nombre de nuits</label>
+						<br>
+						<select name="nuits" class="nbrnuit">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+						</select>
+						<br><br>
+						<label >Choix de la chambres</label>	<br>					
+						<select name="chambres" class="choixchambre">
+							<option value="chambre">Choissiez votre chambre</option>
+							<option value="Chambre Simple">Chambre Simple</option>
+							<option value="Chambre Double">Chambre Double</option>
+							<option value="Chambre Triple">Chambre Triple</option>
+							<option value="Chambre Famille">Chambre Famille</option>
+						</select>
+						<br>
+						<br>
+						<input type="submit" value="Réservez">
+					</form>
+				
+				</div>
+					
+				<table class="description">
+					<tr><th>Description</th></tr>
+					<tr>
+						<td>
+								<ul>
+									<li>25 m2</li>
+									<li>2 lits doubles</li>
+									<li>Non fumeurs</li>
+									<li>Climatisation à contrôle individuel</li>
+									<li>Chauffage</li>
+									<li>Mini-bar</li>
+									<li>Nécessaire pour faire du thé et du café</li>
+									<li>Insonorisation</li>
+									<li>Téléviseur écran plat</li>
+									<li>Chaînes satellite</li>
+									<li>Réveil</li>
+									<li>Accès Wi-Fi</li>
+									<li>Coffre-fort</li>
+									<li>    Téléphone</li>
+									<li>Salle de bain avec toilettes</li>
+									<li>Douche</li>
+									<li>Double lavabo</li>
+									<li>Sèche-cheveux</li>
+									<li>Produits de toilette fournis</li>
+								</ul>
+						</td>
+					</tr>
+				</table>
+				
+				<table class="prix">
+					<tr>
+						<th>Prix</th>
+					</tr>
+					<tr><td>
+						
+					
+							<p>Non annulable, non remboursable</p>
+							<ul>
+								<li>181,00€ / nuit</li>
+							</ul>
+							<p>Annulable sous conditions</p>
+							<ul>
+								<li>201,00€ / nuit</li>
+							</ul>	
+					</td></tr>	
+				</table>
+
+				<div class="chambres">
+					<a href="chambreSimple.html"><h1 class="titrechambres"> Chambre Simple </h1></a>
+					
+					<div class="imgchambre">
+						<a href="chambreSimple.html"><img src="images/chambresimple.jpg" alt="chambre simple"></a>
+					</div>
+				</div>
+				<div class="chambres">
+					<a href="chambreDouble.html"><h1 class="titrechambres"> Chambre Double</h1></a>
+					
+					<div class="imgchambre">
+						<a href="chambreDouble.html"><img src="images/chambredouble.jpg" alt="chambre double"></a>
+					</div>
+				</div>
+
+				<div class="chambres">
+					<a href="chambreTriple.html"><h1 class="titrechambres"> Chambre Triple</h1></a>
+					
+					<div class="imgchambre">
+						<a href="chambreTriple.html"><img src="images/chambretriple.jpg" alt="chambre triple"></a>
+					</div>
+				</div>
+				
+				<div class="chambres">
+					<a href="chambreFamille.html"><h1 class="titrechambres"> Chambre Famille</h1></a>
+				
+					<div class="imgchambre">
+						<a href="chambreFamille.html"><img src="images/chambrefamille.jpg" alt="chambre famille"></a>
+					</div>
+				</div>	
+			</div>
+
+		</div>
+
+		<footer>
+			<a href="">
+				<img class="social" src="images/icone-facebook.png" alt="icone faceook">
+			</a>
+			<a href="">
+				<img class="social" src="images/icon-twiter.png" alt="icone twiter">
+			</a>
+		<table class="pied2page">
+			<tr>
+				<td><p class="entete-droite"><a href="contact.html"> Contact  </a></p></td>
+			</tr>
+			<tr>
+				<td><p class="entete-droite"><a href="index.html">  Acceuil  </a></p></td>
+			</tr>
+			<tr>
+				<td><p class="entete-droite"><a href="mentionlegales.html"> Mentions Légeles </a></p></td>
+			</tr>
+		</table>
+			
+			
+				<p class="entete-adresse">56 rue Bassano 75008 Paris <br> Tel : +33 (0)1 01 01 01 01 </p>
+		</footer>
+
+	</div>
+
+
+
+
+
+
+</body>
+</html>
+

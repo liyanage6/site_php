@@ -10,23 +10,25 @@
 	}
 	if(utilisateurEstConnecteEtAdmin())
     {
-        echo '<a href="'. RACINE_SITE . 'admin/gestion_membres.php">Gestion des membres</a>';
-        echo '<a href="'. RACINE_SITE . 'admin/gestion_commandes.php">Gestion des commandes</a>';
-        echo '<a href="'. RACINE_SITE . 'admin/gestion_boutique.php">Gestion de la boutique</a>';
+        echo '<ul>';
+            echo '<li><a href="'. RACINE_SITE . 'admin/gestion_membres.php">Gestion des membres</a></li>';
+            echo '<li><a href="'. RACINE_SITE . 'admin/gestion_commandes.php">Gestion des commandes</a></li>';
+            echo '<li><a href="'. RACINE_SITE . 'admin/gestion_boutique.php">Gestion de la boutique</a></li>';
     }
     if(utilisateurEstConnecte())
     {
-        echo '<a href="'. RACINE_SITE . 'profil.php">Voir votre profil</a>';
-        echo '<a href="'. RACINE_SITE . 'boutique.php">Accès à la boutique</a>';
-        echo '<a href="'. RACINE_SITE . 'panier.php">Voir votre panier</a>';
-        echo '<a href="?action=deconnexion" onclick="alert(\'Vous venez de vous déconnecter !\')">Se déconnecter</a>';
+            echo '<li><a href="'. RACINE_SITE . 'profil.php">Voir votre profil</a></li>';
+            echo '<li><a href="'. RACINE_SITE . 'boutique.php">Accès à la boutique</a></li>';
+            echo '<li><a href="'. RACINE_SITE . 'panier.php">Voir votre panier</a></li>';
+            echo '<li><a href="?action=deconnexion" onclick="alert(\'Vous venez de vous déconnecter !\')">Se déconnecter</a></li>';
     }
     else  //menu pour le simple visiteur
     {
-        echo '<a href="'. RACINE_SITE . 'inscription.php">Inscription</a>';
-        echo '<a href="'. RACINE_SITE . 'connexion.php">Connexion</a>';
-        echo '<a href="'. RACINE_SITE . 'boutique.php">Accès à la boutique</a>';
-        echo '<a href="'. RACINE_SITE . 'panier.php">Voir votre panier</a>';
+            echo '<li><a href="'. RACINE_SITE . 'boutique.php">Accès à la boutique</a></li>';
+            echo '<li><a href="'. RACINE_SITE . 'inscription.php">Inscription</a></li>';
+            echo '<li><a href="'. RACINE_SITE . 'connexion.php">Connexion</a></li>';
+            echo '<li><a href="'. RACINE_SITE . 'panier.php">Voir votre panier</a></li>';
+        echo '</ul>';
     }
 ?>
 

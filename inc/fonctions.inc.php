@@ -90,6 +90,12 @@ function informationSurUnMembre($id)
     return $resultat;
 }
 
+function informationSurUnCommentaire($id)
+{
+    $resultat = executeRequete("SELECT * FROM commentaire WHERE id_commentaire=$id");
+    return $resultat;
+}
+
 /****************
 FONCTIONS PANIER
  ****************/

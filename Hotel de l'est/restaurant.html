@@ -1,0 +1,251 @@
+<!doctype html>
+<html> 
+<head>
+		<title>Hôtel de l'Est</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="styles/style.css"/>
+	<link rel="stylesheet" type="text/css" href="styles/jquery/jquery-ui.css"/>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<!-- Important Owl stylesheet -->
+    <link rel="stylesheet" href="styles/owl.carousel.css">
+     
+    <!-- Default Theme -->
+    <link rel="stylesheet" href="styles/owl.theme.css">
+     
+    <!-- Include js plugin -->
+    <script src="js/owl.carousel.js"></script>
+  
+	<style>
+
+	</style>
+</head>
+<body>	
+	<div class="conteneur">
+
+		<header>
+			<a href="">
+				<img class="social" src="images/icone-facebook.png" alt="icone faceook">
+			</a>
+			<a href="">
+				<img class="social" src="images/icon-twiter.png" alt="icone twiter">
+			</a>
+			
+			<p class="entete-droite"><a href="contact.html"> Contact </a></p>
+			<p class="entete-droite"><a href="index.html"> Acceuil </a></p>
+			<a href="index.html"><img class="logoHE" src="images/HE-logo.png" alt="logo hotel de l'est"></a>
+				<h1 class="titre-entete"><a href="index.html">Hotel de <span>l ' Est</span> </a></h1>
+			
+			
+		</header>
+		<nav>
+			<ul>
+				<li><a href="chambres.html" >Chambres</a></li>
+				<li><a href="seminaire.html" >Séminaire</a></li>
+				<li><a href="restaurant.html" >Restaurant</a></li>
+				<li><a href="services.html" >Service</a></li>		
+			</ul>
+		</nav>
+		<div class="principal">
+			<h1>Restaurant</h1>
+				<h1 class="resaTitre">Reservation</h1>
+				<div class="reservation">
+					<form >
+						<br>
+						<label>Date d'arrivée</label>
+						 <input type="text" id="datepicker" class="datepicker">
+						<br>
+						<br>
+						
+						<label>Quel type de repas</label>
+						<br>
+						<select name="typeRepas" id="choixRepas">
+							<option value="dejeuner">Déjeuner</option>
+							<option value="diner">Diner</option>
+						</select>
+						<br>
+						<br>
+						<label >Choix du menu</label>		<br>				
+						<select name="menu" class="choixchambre">
+							<option value="restaurant">Choissiez votre menu</option>
+							<option value="Menu Reunion">Menu Réunion</option>
+							<option value="Menu Invitation">Menu Invitation</option>
+							<option value="Menu Prestige">Menu Prestige</option>
+						</select>
+						<br>
+						<br>
+						<label >Nombre de personne</label>
+						<br>
+						<select name="personne" class="nbrPers">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</select>
+						<br><br>
+						<input type="submit" value="Réservez">
+					</form>
+				</div>
+				<h2 class="titreValeur">Nos Valeurs</h2>
+				<p class="textValeur">Notre hôtel 3 étoiles unique est niché dans un hôtel particulier parisien du 19e siècle près de l’Arc de Triomphe. Il offre aux voyageurs d’affaires et de loisirs un environnement paisible et des services de première classe. Nous avons 39 chambres superbe. Notre équipe aimable et dévouée vous souhaite un séjour vraiment merveilleux à l’Hôtel de l'Est.</p>
+				<div class="photo">
+					
+<!-- Carousel photo-->
+				    <div id="owl-demo" class="owl-carousel owl-theme">
+				     	<div class="item"><img src="images/restaurant2.jpg" alt=""></div>
+					    <div class="item"><img src="images/bar.jpg" alt=""></div>
+				     
+					</div>
+
+
+				</div>
+			<div class="bloc">
+				<div class="menu">
+					<h1 class="titremenu"> Menu Reunion <br>13.62 € </h1>
+					
+										
+					<h3>Entrée :</h3>
+					<p>Tartare de tomate et de chèvre <br> OU <br> Veloute de courgette au parmesan.</p>
+					<h3>Plats :</h3>
+					<p>Poulet basquaise <br>  OU <br> Lieu rôti aux légumes.</p>
+					<h3>Desserts :</h3>
+					<p>Moelleux au chocolat <br> OU <br> tarte maison.</p>
+					<br> <br>
+					<p>Café compris, vin en supplément.</p>
+
+				</div>	
+				<div class="menu">
+					
+					<h1 class="titremenu"> Menu Invitation <br> 16.76 €</h1>
+					<h3>Entrée :</h3>
+					<p>Lasagnes d'aubergines à la provençale <br> OU <br> Carpaccio de saumon.</p>
+					<h3>Plats :</h3>
+					<p>Magret de canard <br>OU <br> Truite en papillote aux olives.</p>
+					<h3>Desserts et fromages :</h3>
+					<p>Plateau de fromages.</p>
+					<br>
+					<p>Nougat glacé <br>OU <br> Crème brûlé à la cassonade.</p>
+					<br> <br>
+					<p>Café compris, vin en supplément.</p>
+
+				</div>
+
+				<div class="menu">
+					
+					<h1 class="titremenu"> Menu Prestige <br> 18.86 €</h1>
+					<h3>Entrée :</h3>
+					<p>Salade verte et polée de Saint-Jasques <br>OU <br> Assiette de foie gras.</p>
+					<h3>Plats :</h3>
+					<p>Souris d'agneau au romarin <br>OU <br>Bar au pistou.</p>
+					<h3>Desserts et fromages :</h3>
+					<p>Plateau de fromages.</p>
+					<br>
+					<p>Profiteroles au chocolat <br>OU <br> soupe de fruits.</p>
+					<br> <br>
+					<p>Café compris, vin en supplément.</p>
+				
+				</div>
+				
+				<div class="menu">
+				
+					<h1 class="titremenu"> Les Vins</h1>
+					
+					<h3>Vins Rouges :</h3>
+					<p>2004 Saumur les Rivières.</p>
+					<br>
+					<p>2003 Côteau du lyonnais le Pot des Voraces.</p>
+					<br>
+					<p>2004 Bergerac château la Haute Metairie.</p>
+					<h3>Vins Roses :</h3>
+					<p>2004 Costieres de nimes château St Louis la perdrix.</p>
+					<br>
+					<p>2004 Côte de Provence Cesar Mestralou.</p>
+					<h3>Vins Blancs :</h3>
+					<p>2003 Entre deux mers Bordeaux château de Sanse.</p>
+					<br>
+					<p>2005 Muscadet coteaux de la Loire Cour de Rohan.</p>
+					<br><br>
+					<p>au verre 12cl ou au carafon.</p>
+				
+				
+				</div>
+				<div class="menu">
+				
+					<h1 class="titremenu"> Les Alcools</h1>
+					<h3>Aperitif :</h3>
+					<p>Pastis 51, Ricard.</p>
+					<br><p>Martini rouge, Martini blanc</p>
+					<br><p>Campari</p>
+					<br><p>Américano maison</p>
+					<br><p>Suze, Muscat de Rivesaltes</p>
+					<br><p>Rhum, Gin, Vodka, Malibu</p>
+					<br><p>Kir au vin blanc</p>
+					<br><p>Porto ouge, Porto blanc</p>
+					<br><p>Martin Gin</p>
+					<h3>Les Whisky</h3>
+					<p>Crowley</p>
+					<br><p>Glenfiddich</p>
+					<br><p>Supplément jus de fruit, soda</p>
+
+				</div>
+
+				<div class="menu">
+				
+					<h1 class="titremenu"> Les Autres Boissons</h1>
+					<h3>Les Bières :</h3>
+					<p>Pression Leffe blonde</p>
+					<br><p>Picon Bière</p>
+					<br><p>Hoegaardeb Blanche</p>
+					<br><p>Leffe blonde</p>
+					<br><p>Desperado</p>
+					<h3>Jus de Fruits - Eaux - Sodas :</h3>
+					<p>Vittel, Badoit, St Pelegrino</p>
+					<br><p>Coca Cola</p>
+					<br><p>Coca Cola Light</p>
+					<br><p>Limonade, Diabolo</p>
+					<br><p>Orangina</p>
+					<br><p>Perrier</p>
+					<br><p>Schweppes</p>
+
+				</div>
+			</div>
+			
+			
+			
+		</div>
+
+		<footer>
+			<a href="">
+				<img class="social" src="images/icone-facebook.png" alt="icone faceook">
+			</a>
+			<a href="">
+				<img class="social" src="images/icon-twiter.png" alt="icone twiter">
+			</a>
+		<table class="pied2page">
+			<tr>
+				<td><p class="entete-droite"><a href="contact.html"> Contact  </a></p></td>
+			</tr>
+			<tr>
+				<td><p class="entete-droite"><a href="index.html">  Acceuil  </a></p></td>
+			</tr>
+			<tr>
+				<td><p class="entete-droite"><a href="mentionlegales.html"> Mentions Légeles </a></p></td>
+			</tr>
+		</table>
+			
+			
+				<p class="entete-adresse">56 rue Bassano 75008 Paris <br> Tel : +33 (0)1 01 01 01 01 </p>
+		</footer>
+
+	</div>
+
+</body>
+</html>
+

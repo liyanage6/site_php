@@ -68,7 +68,7 @@ if(isset($_GET['action']) && $_GET['action'] == 'mail')
 
     $resultat = informationSurUnMembre($_GET['id_membre']);
     $membre_actuel = $resultat->fetch_assoc();
-    debug($membre_actuel);
+    //debug($membre_actuel);
 
     ?>
 

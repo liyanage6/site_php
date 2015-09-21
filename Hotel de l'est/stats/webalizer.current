@@ -1,0 +1,417 @@
+# Webalizer V2.21-02 Incremental Data - 09/15/2015 23:25:19
+2015 9 15 23 25 19
+191 168 46 43 13 19 3026246 94 36 0
+5 4 34 1 15
+2 1 32 1 1 1
+1 0 0 1 1 1
+0 0 0 0 0 0
+3 2 2284 3 2 2
+5 5 8870 4 0 0
+2 1 52 2 1 1
+4 2 2481 3 3 3
+2 2 2264 1 1 1
+1 1 2232 1 1 1
+24 23 126721 6 12 3
+13 13 73696 4 12 4
+8 8 21609 4 2 2
+47 44 1287945 4 12 4
+64 60 1481054 10 32 8
+15 6 17006 5 14 5
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+1 1 52 0
+3 2 2264 2
+1 1 0 1
+2 2 1134 0
+0 0 0 0
+2 2 4464 2
+2 2 2264 1
+0 0 0 0
+13 13 75535 12
+0 0 0 0
+27 27 1302662 2
+11 8 33485 4
+14 13 97125 10
+26 25 146166 24
+6 6 9414 5
+7 7 19377 1
+3 2 8169 2
+5 3 7984 3
+12 10 21580 11
+35 32 1264319 2
+0 0 0 0
+3 3 7736 0
+11 7 19396 6
+7 2 3120 6
+0
+0
+0
+168
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+6
+0
+0
+0
+0
+0
+0
+17
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+# -urls- 
+/
+0 29 0 136440 22 1
+/js/main.js
+0 3 0 1725 0 0
+/styles/jquery/images/ui-icons_ffffff_256x240.png
+1 1 0 6299 0 0
+/images/emplacement2.jpg
+1 2 0 160466 0 0
+/styles/jquery/images/ui-bg_inset-soft_25_000000_1x100.png
+1 1 0 275 0 0
+/images/icon-twiter.png
+1 2 0 28896 0 0
+/images/chambresimple.jpg
+1 2 0 217920 0 0
+/styles/jquery/images/ui-bg_glass_20_555555_1x400.png
+1 1 0 260 0 0
+/styles/jquery/jquery-ui.css
+0 6 0 24138 0 0
+/images/chambrefamille.jpg
+1 2 0 92642 0 0
+/styles/jquery/images/ui-bg_glass_40_0078a3_1x400.png
+1 1 0 342 0 0
+/styles/jquery/images/ui-bg_gloss-wave_25_333333_500x100.png
+1 1 0 3816 0 0
+/images/bg.jpg
+1 2 0 12544 0 0
+/contact.html
+0 5 18136736 21063 0 0
+/images/emplacement.jpg
+1 2 18131248 158250 0 0
+/styles/owl.carousel.css
+0 7 0 3696 0 0
+/images/hotelext3.jpg
+1 2 0 139914 0 0
+/robots.txt
+0 18 0 696 0 0
+/images/chambredouble.jpg
+1 2 0 97822 0 0
+/images/services.jpg
+1 2 0 10636 0 0
+/images/paris.jpg
+1 2 0 1003698 0 0
+/chambreFamille.html
+0 5 0 22085 1 0
+/seminaire.html
+0 3 0 11664 1 0
+/chambreSimple.html
+0 7 0 28296 1 0
+/styles/style.css
+0 6 0 19110 0 0
+/images/chambretriple.jpg
+1 2 0 81916 0 0
+/chambreTriple.html
+0 6 0 22392 1 0
+/js/jquery-ui.min.js
+0 3 0 36993 0 0
+/chambreDouble.html
+0 5 0 30895 2 0
+/mentionlegales.html
+0 3 0 27213 0 0
+/images/chambretriple2.jpg
+1 2 0 210400 0 0
+/styles/jquery/images/ui-bg_highlight-soft_80_eeeeee_1x100.png
+1 1 0 276 0 0
+/chambres.html
+0 7 0 30632 1 0
+/images/hotelint2.jpg
+1 1 0 55934 0 0
+/styles/owl.theme.css
+0 5 0 3030 0 0
+/js/owl.carousel.js
+0 4 0 35004 0 0
+/services.html
+0 6 0 26569 1 0
+/images/HE-logo.png
+1 2 0 101786 0 0
+/restaurant.html
+0 4 0 18059 1 0
+/styles/AdineKirnberg-Alternate.otf
+0 3 0 93645 0 0
+/images/icone-facebook.png
+1 2 0 5042 0 0
+/images/restaurant3.jpg
+1 2 0 21184 0 0
+/images/seminaire-mini.jpg
+1 2 0 18984 0 0
+# End Of Table - urls
+# -sites- (monthly)
+static-ip-85-25-103-119.inaddr.ip-pool.com
+0 1 1 2232 1 1441775939
+/
+centro-39.grapeshot.co.uk
+0 1 1 2232 1 1441978040
+/
+46.165.197.142
+0 2 2 7952 1 1442164266
+/
+crawl-66-249-67-117.googlebot.com
+0 4 4 9937 0 0
+-
+192.99.159.16
+0 12 12 73303 1 1442220067
+/services.html
+msnbot-207-46-13-53.search.msn.com
+0 1 0 0 1 1441502223
+/services.html
+tor-proxy-readme.cloudexit.eu
+0 1 1 2232 1 1442040763
+/
+64.246.178.34
+0 2 2 2264 1 1441675715
+/
+msnbot-207-46-13-80.search.msn.com
+0 5 4 5158 1 1441904926
+/restaurant.html
+46.166.188.221
+0 1 1 2232 1 1442149369
+/
+crawl-66-249-64-99.googlebot.com
+0 1 1 4023 0 0
+-
+38.100.21.66
+0 9 9 61280 1 1441974792
+/chambres.html
+crawl-66-249-64-26.googlebot.com
+0 2 2 104 0 0
+-
+193.201.227.140
+0 4 1 8554 1 1442230146
+/
+msnbot-207-46-13-136.search.msn.com
+0 5 5 24371 0 0
+-
+crawl-66-249-67-89.googlebot.com
+0 3 3 1186 0 0
+-
+ec2-52-88-248-56.us-west-2.compute.amazonaws.com
+0 1 1 2232 1 1441980974
+/
+crawl-66-249-67-111.googlebot.com
+0 2 2 7208 0 0
+-
+security.lightspeedsystems.com
+0 13 12 75757 1 1442238490
+/mentionlegales.html
+85.175.242.93
+0 4 0 850 1 1442356319
+-
+msnbot-157-55-39-199.search.msn.com
+0 1 0 0 1 1441236128
+/seminaire.html
+ec2-54-236-234-59.compute-1.amazonaws.com
+0 1 1 2232 1 1442207348
+/
+msnbot-157-55-39-14.search.msn.com
+0 1 1 31215 0 0
+-
+str75-4-78-193-192-88.fbxo.proxad.net
+0 26 26 1300430 1 1442226930
+/
+85.143.105.197
+0 1 0 217 1 1441642864
+-
+msnbot-207-46-13-59.search.msn.com
+0 2 1 32 1 1441110922
+/chambres.html
+crawl-66-249-64-89.googlebot.com
+0 1 1 528 0 0
+-
+amontsouris-655-1-196-212.w90-46.abo.wanadoo.fr
+0 34 31 1256399 1 1442172054
+/
+mj3.naefmarco.ch
+0 10 10 21362 1 1442170789
+/services.html
+crawl-66-249-64-31.googlebot.com
+0 5 4 10186 2 1442342503
+-
+evo-hl21-1.gameservers.net
+0 1 1 7920 1 1442344128
+/
+crawl-66-249-67-123.googlebot.com
+0 1 1 2232 1 1442071219
+/
+mansfield.didici.be
+0 5 5 7182 1 1442328328
+/chambres.html
+msnbot-157-55-39-176.search.msn.com
+0 1 1 32 0 0
+-
+ec2-54-206-34-36.ap-southeast-2.compute.amazonaws.com
+0 1 1 2232 1 1441621222
+/
+199.58.86.211
+0 2 2 7952 1 1441990712
+/
+ns503639.ip-192-99-150.net
+0 1 1 0 1 1441853644
+/
+45.32.244.164.vultr.com
+0 1 1 7920 1 1442270226
+/
+msnbot-157-55-39-211.search.msn.com
+0 1 0 0 1 1441391374
+/chambreSimple.html
+crawl-66-249-64-94.googlebot.com
+0 1 1 3185 0 0
+-
+spftor1e1.privacyfoundation.ch
+0 1 1 2232 1 1442220177
+/
+crawl-66-249-64-21.googlebot.com
+0 1 1 606 0 0
+-
+msnbot-157-55-39-38.search.msn.com
+0 2 1 32 1 1441646343
+/chambreTriple.html
+crawl-66-249-67-95.googlebot.com
+0 1 1 2232 1 1441410957
+/
+69.58.178.57
+0 11 11 65945 1 1441890924
+/chambreTriple.html
+95-25-96-94.broadband.corbina.ru
+0 4 0 836 1 1442359519
+-
+# End Of Table - sites (monthly)
+# -sites- (daily)
+85.175.242.93
+0 4 0 850 1 1442356319
+-
+crawl-66-249-64-31.googlebot.com
+0 1 0 218 1 1442342503
+-
+evo-hl21-1.gameservers.net
+0 1 1 7920 1 1442344128
+/
+mansfield.didici.be
+0 5 5 7182 1 1442328328
+/chambres.html
+95-25-96-94.broadband.corbina.ru
+0 4 0 836 1 1442359519
+-
+# End Of Table - sites (daily)
+# -referrers- 
+- (Direct Request)
+0 127
+http://nicholasliyanage.com/
+0 43
+http://hundejo.com/
+0 1
+http://nicholasliyanage.com/styles/style.css
+0 6
+http://nicholasliyanage.com/styles/owl.carousel.css
+0 1
+http://washpa.com
+0 1
+http://hvd-store.com/
+0 1
+http://nicholasliyanage.com/styles/jquery/jquery-ui.css
+0 6
+http://pizza-imperia.com/
+0 1
+http://burger-imperia.com/
+0 1
+http://whois.domaintools.com/nicholasliyanage.com
+0 1
+http://domainsigma.com/whois/nicholasliyanage.com
+0 1
+http://limoservicenagoya.com
+0 1
+# End Of Table - referrers
+# -agents- 
+Mozilla/5.0 (Windows; U; Windows NT 5.1; en; rv:1.9.0.13) Gecko/2009073022 Firefox/3.5.2 (.NET CLR 3.5.30729) SurveyBot/2.3 (
+0 2
+Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:33.0) Gecko/20100101 Firefox/33.0
+0 26
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.2)
+0 9
+Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12F70 Safari
+0 1
+Mozilla/5.0 (compatible; MJ12bot/v1.4.5; http://www.majestic12.co.uk/bot.php?+)
+0 32
+Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
+0 22
+WWW-Mechanize/1.73
+0 1
+WWW-Mechanize/1.74
+0 1
+Mozilla/5.0 (compatible; DomainSigmaCrawler/0.1; +http://domainsigma.com/robot)
+0 1
+Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:14.0; ips-agent) Gecko/20100101 Firefox/14.0.1
+0 11
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36
+0 1
+Mozilla/5.0 (Windows NT 6.0; rv:34.0) Gecko/20100101 Firefox/34.0
+0 8
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:40.0) Gecko/20100101 Firefox/40.0
+0 34
+Mozilla/5.0 (compatible; GrapeshotCrawler/2.0; +http://www.grapeshot.co.uk/crawler.php)
+0 1
+Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)
+0 19
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.36
+0 4
+LSSRocketCrawler/1.0 LightspeedSystems
+0 13
+Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.23 (KHTML, like Gecko) Chrome/11.0.686.3 Safari/534.23
+0 1
+Mozilla/4.0 (compatible; Synapse)
+0 4
+# End Of Table - agents
+# -search strings- 
+# End Of Table - search strings
+# -usernames- 
+# End Of Table - usernames

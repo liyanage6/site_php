@@ -42,7 +42,7 @@ CREATE TABLE membre (
   mdp varchar(32) NOT NULL,
   nom varchar(20) NOT NULL,
   prenom varchar(20) NOT NULL,
-  email varchar(20) NOT NULL,
+  email varchar(100) NOT NULL,
   sexe enum('m','f') NOT NULL,
   ville varchar(20) NOT NULL,
   cp int(5) unsigned zerofill NOT NULL,

@@ -1,25 +1,169 @@
-body{
+    body{
     margin: 0;
     background-color: #808080;
+    background: url(../photo/bg.jpg) top left repeat;
+    background-attachment: fixed;
 }
-/**************************************************** Menu ************************************************/
-nav{
-    float: left;
-    width: 100%;
-    background: #000000;
-    margin: 0 0 20px 0;
+    /******** Conteneur *********/
+    .conteneur{
+        max-width: 1024px;
+        min-height: 768px;
 
-}
-nav a{
-    float: left;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 5px 15px;
-}
-nav a:hover{
-    background: #04baf6;
-}
-/**************************************************** Page ************************************************/
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgba(2, 0, 0, 0.8);
+    }
+
+    /***** Entete *****/
+    header{
+        min-height: 100px;
+        width: auto;
+        background-color: rgba(2, 0, 0, 0.8);
+        background: url(../photo/hotelext3.jpg) 50% 30% no-repeat ;
+        border-radius: 8px;
+        /*border:#C0A028 solid 4px;
+        */margin-bottom: 35px;
+    }
+    /**** LOGO - Etoiles ****/
+    header img{
+        width: 25%;
+        height: 25%;
+        float: left;
+        margin-left: 24%;
+        box-shadow: none;
+    }
+
+    /******* logo reseau sociaux entete *******/
+    header .social {
+        float: left;
+        margin-left: 20px;
+        margin-right: 10px;
+        margin-top: 5px;
+        width: 30px;
+        height: 30px;
+        border: solid black 1px;
+        border-radius: 5px;
+    }
+    /****** Entete Droite Acceuil Contact Adresse*******/
+    header .entete-droite{
+        float: right;
+        margin-right: 10px;
+        margin-top: 20px;
+        font-family: Adine Kirnberg Alternate;
+        text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+
+        font-size: 38px;
+        padding-top: 10px;
+        padding-right: 10px;
+    }
+    .entete-droite a,
+    .entete-droite a:hover,
+    .entete-droite a:active,
+    .entete-droite a:visited,
+    .entete-droite a:link{
+        color: white;
+        text-decoration:none;
+
+    }
+    .entete-droite a:hover{
+        color: #C0A028;
+        border-bottom: 2px #C0A028 solid;
+    }
+
+    /******** titre entete ******/
+    header .titre-entete{
+        width: auto;
+        clear: both;
+        font-family: Adine Kirnberg Alternate;
+        font-size: 100px;
+        text-shadow: #000000 2px 1px, #000000 -2px 1px, #000000 -2px -1px, #000000 2px -1px;
+        padding-top: 0px;
+        padding-bottom: 30px;
+        margin-left: 20%;
+        margin-right: 20%;
+        line-height: 80px;
+        text-align: center;
+        text-decoration: none;
+
+    }
+    header span{
+
+    }
+    .titre-entete a,
+    .titre-entete a:hover,
+    .titre-entete a:visited,
+    .titre-entete a:link,
+    .titre-entete a:active{
+        color: #C0A028;
+        text-decoration: none;
+
+    }
+    .titre-entete a:hover{
+        color: #C0A028;
+        text-decoration: none;
+    }
+    .titre-entete a:active{
+        color:#C0A028;
+        text-decoration: none;
+    }
+
+    /******* Menu *******/
+    nav{
+        width: auto;
+        min-height: 60px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        margin-top: -20px;
+
+        border-radius: 10px;
+        border: #C0A028 4px solid;
+
+    }
+    /****** Cellule Menu *******/
+    nav li{
+        display: inline-block;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-top: 5px;
+        list-style: none;
+        padding-top: 10px;
+        padding-left: 2px;
+        padding-right: 2px;
+        font-size: 45px;
+        font-family: Adine Kirnberg Alternate;
+        color: black;
+    }
+    nav li a,
+    nav li a:active,
+    nav li a:visited,
+    nav li a:link,
+    nav li a:hover{
+
+        color: #C0A028;
+        text-decoration:none;
+    }
+    nav li a:active{
+        color:white;
+    }
+    nav li a:hover
+    {
+        color: #fff;
+        border-bottom: solid #C0A028 1px;
+
+        padding-top: 10px;
+    }
+    /**** Titre *****/
+    .principal h1{
+        color: #C0A028;
+        text-align: center;
+        font-family: Adine Kirnberg Alternate;
+        font-size: 360%;
+        border-bottom: solid #C0A028 1px;
+        margin-top: 10px;
+    }
+
+    /**************************************************** Page ************************************************/
 section{
     clear: both;
     margin: 30px;
@@ -92,8 +236,83 @@ img{
 
 /**************************************************** Commentaire ************************************************/
 .commentaire{
-    min-width: 300px;
-    max-width: 300px;
-    min-height: 100px;
-    max-height: 100px;
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 70px;
+    max-height: 70px;
+    color: #000000;
 }
+
+
+    /******* Pied de page *******/
+    .pied2page{
+        margin-top: 0px;
+        font-size: 30px;
+        line-height: 0px;
+        padding-top: -10px;
+        width: 150px;
+        height: 100px;
+        border: none;
+        font-family:  Adine Kirnberg Alternate;
+    }
+    .pied2page td{
+        padding-top: 4px;
+        border: none;
+        width: 400px;
+        padding-right: 150px;
+        border: thin black solid;
+    }
+    footer{
+        max-width: 1024px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+
+        background-color: rgba(2, 0, 0, 0.8);
+        margin-top: 40px;
+        clear: both;
+        border-radius: 8px;
+        /*border:#C0A028 solid 4px;
+        */margin-bottom: 35px;
+    }
+    /******* logo reseau sociaux entete *******/
+    footer .social{
+        float: right;
+        margin-left: 20px;
+        margin-right: 10px;
+        margin-top: 60px;
+        width: 30px;
+        height: 30px;
+        box-shadow: none;
+        border: dashed;
+
+    }
+    .entete-adresse{  /****		Pied de page adresse		***/
+        color: #C0A028;
+        margin-top: -200px;
+        margin-left: 40%;
+        font-family: Adine Kirnberg Alternate;
+        font-size: 50px;
+        display: inline-block;
+        border: dashed;
+    }
+    .mentionlegales{
+        color:white;
+        text-align: left;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    /****** Entete Droite Acceuil Contact *******/
+    footer .entete-droite {
+        float: left;
+        margin-top: 20px;
+        font-family: Adine Kirnberg Alternate;
+        font-size: 38px;
+        padding-top: 10px;
+        padding-right: 10px;
+    }
+
+    .entete-droite .tr .td{
+        width: 200px;
+    }
