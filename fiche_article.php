@@ -63,7 +63,9 @@ echo "  <h2>Commentaires</h2>
 
 if(isset($_POST['envoyer']) && $_POST['envoyer'] && utilisateurEstConnecte()){
 
-    executeRequete("INSERT INTO commentaire (id_membre, pseudo, contenu) VALUES (".$_SESSION['utilisateur']['id_membre'].", ".$_SESSION['utilisateur']['pseudo'].", $_POST[commentaire])");
+    executeRequete("INSERT INTO commentaire (id_membre, pseudo, contenu, email) VALUES (".$_SESSION['utilisateur']['id_membre'].",
+'".$_SESSION['utilisateur']['pseudo']."', '$_POST[commentaire]','".$_SESSION['utilisateur']['email']."')");
+    echo "<div class='validation'>Félicitations ! Vous venez d'ajouter un commentaire. Merci pour votre contribution</div> ";
 
 }
 elseif(isset($_POST['envoyer']) && $_POST['envoyer'] && !utilisateurEstConnecte())

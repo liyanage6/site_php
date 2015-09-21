@@ -58,7 +58,8 @@ if(isset($_POST['submit']))
             }
             executeRequete("INSERT INTO membre (pseudo,mdp,nom,prenom,email,sexe,ville,cp,adresse)
                             VALUES ('$_POST[pseudo]','$_POST[mdp]','$_POST[nom]','$_POST[prenom]','$_POST[email]','$_POST[sexe]','$_POST[ville]','$_POST[cp]','$_POST[adresse]')");
-            $msg .= "<div class='validation'>Félicitation !! </div>";
+			//header('location: boutique.php');
+            $msg .= "<div class='validation'>Félicitation !! Vous êtes inscrit ! </div>";
         }
     }
 }

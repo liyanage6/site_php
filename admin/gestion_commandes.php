@@ -24,8 +24,8 @@ for ($i=0; $i < $nbcol; $i++)
     $colonne = $resultat->fetch_field();
     echo '<th>' . $colonne->name . '</th>';
 }
-echo "<th>Modif.</th>";
-echo "<th>Supr.</th>";
+echo "<th>Annulation</th>";
+echo "<th>Validation</th>";
 echo "</tr>";
 
 while ($ligne = $resultat->fetch_assoc())
@@ -44,8 +44,9 @@ while ($ligne = $resultat->fetch_assoc())
             echo "<td>" . $information . "</td>";
         }
     }
-    echo '<td><a href="?action=modification&id_article=' . $ligne['id_commande'] .'">---</a></td>';
-    echo '<td><a href="?action=suppression&id_article=' . $ligne['id_commande'] .'" OnClick="return(confirm(\'En êtes vous certain ?\'));">x</a></td>';
+    echo '<td><a href="?action=modification&id_article=' . $ligne['id_commande'] .'">No</a></td>';
+    echo '<td><a href="?action=suppression&id_article=' . $ligne['id_commande'] .'"
+OnClick="return(confirm(\'En êtes vous certain ?\'));">Yes</a></td>';
     echo '</tr>';
 }
 echo '</table>';
