@@ -4,10 +4,10 @@
 
     <footer>
             <a href="http://www.facebook.fr">
-                <img class="social" src="photo/icone-facebook.png" alt="icone faceook">
+                <img class="social" src="../photo/icone-facebook.png" alt="icone faceook">
             </a>
             <a href="http://www.twitter.fr">
-                <img class="social" src="photo/icon-twiter.png" alt="icone twiter">
+                <img class="social" src="../photo/icon-twiter.png" alt="icone twiter">
             </a>
         <table class="pied2page">
             <tr>

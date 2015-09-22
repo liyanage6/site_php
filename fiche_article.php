@@ -18,6 +18,7 @@ if(isset($_GET['id_article']) && $_GET['id_article'])//je récupère les informa
     $article = $resultat->fetch_assoc(); //=> je rends exploitable les informations sur l'article à afficher
 
     #A présent, on affiche les informations :
+    echo "<div class='ficheA'>";
     echo "<h3>Titre : $article[titre]</h3>";
     echo "<p>Description : $article[description]</p>";
     echo "<p>Catégorie : $article[categorie]</p>";
@@ -30,7 +31,7 @@ if(isset($_GET['id_article']) && $_GET['id_article'])//je récupère les informa
 
     if($article['stock'] > 0) //s'il y a du stock disponible. C'est-à-dire si stock est supérieur à 0.
     {
-        echo "Nombre d'article(s) disponible : $article[stock]<br>";
+        echo "<p>Nombre d'article(s) disponible : $article[stock]</p><br>";
 
         echo "<form method='post' action='panier.php'>";
         echo "<input type='hidden' name='id_article' value='$article[id_article]'>"; //type="hidden". Car on va récupérer cette information qui inutile pour le client. Du coup, on cache cette information.
@@ -50,7 +51,7 @@ if(isset($_GET['id_article']) && $_GET['id_article'])//je récupère les informa
         echo 'Rupture de stock !';
     }
     echo "<br/><a href='boutique.php?categorie=" . $article['categorie'] . "'>Retour vers la catégorie : $article[categorie]</a>";
-    echo "  <h2>Commentaires</h2>
+    echo "  <h2>Commentaires:</h2>
             <form action='' method='post'>
                 <h5>Rédiger votre commentaire:</h5>
                 <textarea class='commentaire' name='commentaire'></textarea><br>
@@ -80,17 +81,18 @@ elseif(isset($_POST['envoyer']) && $_POST['envoyer'] && !utilisateurEstConnecte(
 }
 
 $resultat = executeRequete("SELECT * FROM commentaire");
-echo "Nombre de commentaire(s) pour cette article : " . $resultat->num_rows;
+echo "<p>Nombre de commentaire(s) pour cette article : " . $resultat->num_rows."</p>";
 
 while($ligne = $resultat->fetch_assoc())
 {
-    echo "<p>".$ligne['pseudo']." a commenté: </p>";
-    echo "<textarea class='commentaire' disabled>".$ligne['contenu']."</textarea>";
+    echo "<br><p>".$ligne['pseudo']." a commenté : </p>";
+    echo "<textarea class='commentaire' disabled>".$ligne['contenu']."</textarea><br>";
 
     if(utilisateurEstConnecteEtAdmin()){
-    echo "<br><a href='?action=suppressionCom?id_commentaire=".$ligne['id_commentaire']."'> Supprimer</a>";
+    echo "<a href='?action=suppressionCom?id_commentaire=".$ligne['id_commentaire']."'> Supprimer</a>";
     }
 }
+echo "</div>";
 /**
  * Suppresion d'un commentaire TODO A finir Non fonctionnel !
  */

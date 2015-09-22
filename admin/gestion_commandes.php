@@ -9,10 +9,10 @@ if(!utilisateurEstConnecteEtAdmin())
 }
 
 //j'inclus les parties de mon site :
-require_once('../inc/haut_de_site.inc.php');
+require_once('haut_de_site.inc.php');
 require_once('../inc/menu.inc.php');
 
-echo '<div style="background: #c0c0c0;padding: 10px; ">
+echo '<div style="background-color: rgba(201, 201, 201,0.5);padding: 10px;margin: 10px; ">
 	<h1> Affichage des Commandes </h1>';
 $resultat = executeRequete("SELECT * FROM commande");
 echo "Nombre de commande(s) : " . $resultat->num_rows;
@@ -31,7 +31,7 @@ echo "</tr>";
 while ($ligne = $resultat->fetch_assoc())
 {
     //crée-moi autant de lignes <tr> qu'il y a de résultats dans la BDD (utilisation de fecth_assoc() qui nous ressort les informations d'array(). Donc récupération par l'intermédiaire d'une boucle foreach()
-    debug($ligne);
+    //debug($ligne);
     echo '<tr>';
     foreach ($ligne as $indice => $information)
         //on récupère les indices et à les informations. Exemple : $article['id_article'] = 1
@@ -82,5 +82,5 @@ if(isset($_GET['action']) && $_GET['action'] == "validation")
 }
 
 echo'</div>';
-require_once('../inc/footer.inc.php');
+require_once('footer.inc.php');
 ?>

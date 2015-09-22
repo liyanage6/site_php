@@ -72,7 +72,7 @@ require_once('inc/menu.inc.php');
 echo $msg; //Affichage des messages 
 
 ?>
-			<form method="POST" action="">
+			<form class='formulaire' method="POST" action="">
 			    <label for="pseudo">Pseudo</label>
 			    <input type="text" name="pseudo" id="pseudo" value="" maxlength="14" placeholder="pseudo" 
 			    	title="caractères acceptés : a-zA-Z-0-9_-." >
@@ -104,8 +104,8 @@ echo $msg; //Affichage des messages
 			    <br>
 				
 				<label for="sexe">Sexe</label>
-				<input type="radio" name="sexe" value="M" checked>Homme
-				<input type="radio" name="sexe" value="F" >Femme
+				<input type="radio" name="sexe" value="M" checked><span>Homme</span>
+				<input type="radio" name="sexe" value="F" ><span>Femme</span>
 				<br>
 
 				<label for="ville">Ville</label>
@@ -124,7 +124,7 @@ echo $msg; //Affichage des messages
 			    <br><br>
 				
 
-				<input type="submit" name="submit" value="Inscription">
+				<input style="height: 50px; width: 100px;" type="submit" name="submit" value="Inscription">
 
 			</form>
 		</div>

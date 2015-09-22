@@ -14,6 +14,7 @@ require_once('inc/menu.inc.php');
  * TODO: Modification du profil
  */
 //debug($_SESSION); //Voir les informations contenues dans $_SESSION
+echo "<div class='profil'>";
 print"<p>Bonjour ".$_SESSION['utilisateur']['pseudo']." !</p>";
 print"<p>Votre email ".$_SESSION['utilisateur']['email']."</p>";
 print"<p>Votre nom ".$_SESSION['utilisateur']['nom']."</p>";
@@ -23,11 +24,15 @@ print"<p>Votre code postal ".$_SESSION['utilisateur']['cp']."</p>";
 print"<p>Votre ville ".$_SESSION['utilisateur']['ville']."</p>";
 
 if($_SESSION['utilisateur']['statut']==1){
-	echo "Vous êtes administrateur du site ";
+	echo "<p>Vous êtes administrateur du site </p>";
 }
 else
 	{
 		echo "Vous êtes un utilisateur ! ";
 	}
+echo "</div>";
 
 echo $msg;  //affichage des messages
+
+echo "</div>";
+require_once("inc/footer.inc.php");

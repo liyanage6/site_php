@@ -24,10 +24,10 @@ if(isset($_GET['action']) && $_GET['action'] == "suppression")
 }
 
 //j'inclus les parties de mon site :
-require_once('../inc/haut_de_site.inc.php');
+require_once('haut_de_site.inc.php');
 require_once('../inc/menu.inc.php');
 
-echo '<div style="background: #c0c0c0;padding: 10px; ">
+echo '<div style="background-color: rgba(201, 201, 201,0.5);padding: 10px;margin: 10px; ">
 	<h1> Affichage des Membres </h1>';
 $resultat = executeRequete("SELECT * FROM membre");
 echo "Nombre de membre(s) : " . $resultat->num_rows;
@@ -75,7 +75,7 @@ if(isset($_GET['action']) && $_GET['action'] == 'mail')
     <form action='' method='post'>
         <input type="hidden" id="id_article" name="id_article" value="<?php if(isset($membre_actuel['id_membre'])) echo $membre_actuel['id_membre']; ?>" />
 
-        <h3>Mail :</h3>
+        <h3 style="color: #cccccc; font-size: 25px;">Mail :</h3>
         <p>
             <label for='civilite'>Civilité :</label>
             <select id='civilite' name='civilite'>
@@ -98,7 +98,7 @@ if(isset($_GET['action']) && $_GET['action'] == 'mail')
         </p>
         <p>
             <label for='message'>Message :</label>
-            <textarea id='message' name='message' cols='40' rows='4'></textarea>
+            <textarea id='message' class='commentaire' name='message' cols='40' rows='4'></textarea>
         </p>
         <p>
             <input type='submit' name='envoyer' value='Envoyer' />
@@ -167,4 +167,8 @@ if(isset($_GET['action']) && $_GET['action'] == 'mail')
     }
 }
 
+
+
+echo "</div>";
+require_once('footer.inc.php');
 ?>

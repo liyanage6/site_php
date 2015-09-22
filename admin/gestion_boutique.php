@@ -77,18 +77,18 @@ if(isset($_GET['action']) && $_GET['action'] == "suppression")
     $_GET['action'] = 'affichage';
 }
 
-include("../inc/haut_de_site.inc.php");
+include("haut_de_site.inc.php");
 include("../inc/menu.inc.php");
 echo $msg;
 echo '    <ul>
-            <li> <a href="?action=affichage">Affichage des articles</a></li>
-            <li><a href="?action=ajout">Ajout d\'un
+            <li><a class="titreG" href="?action=affichage">Affichage des articles</a></li>
+            <li><a class="titreG" href="?action=ajout">Ajout d\'un
 article</a></li>
           </ul><hr/>';
 
 if(isset($_GET['action']) && $_GET['action'] == "affichage")
 {
-    echo '<div style="background: #c0c0c0;padding: 10px; ">
+    echo '<div style="background-color: rgba(201, 201, 201,0.5);padding: 10px;margin: 10px; ">
 	<h1> Affichage des Articles </h1>';
     $resultat = executeRequete("SELECT * FROM article");
     echo "Nombre d'article(s) dans la boutique : " . $resultat->num_rows;
@@ -135,13 +135,13 @@ if(isset($_GET['action']) && ($_GET['action'] == 'ajout' || $_GET['action'] == '
     {
         $resultat = informationSurUnArticle($_GET['id_article']);
         $article_actuel = $resultat->fetch_assoc();
-        print_r($article_actuel);
+        //print_r($article_actuel);
     }
     ?>
 
-    <div style="background: #684322;padding: 10px;">
-        <h1> Formulaire Article </h1>
-        <form method="post" enctype="multipart/form-data" action=""> <!--enctype est très important pour l'upload des fichiers-->
+    <div style="padding: 10px;">
+        <h1 style="color: #eeeeee;"> Formulaire Article </h1>
+        <form method="post" enctype="multipart/form-data" action="" class="formulaire"> <!--enctype est très important pour l'upload des fichiers-->
 
             <input type="hidden" id="id_article" name="id_article" value="<?php if(isset($article_actuel['id_article'])) echo $article_actuel['id_article']; ?>" />
             <!--l'attribut 'value=""' permet de conserver les valeurs déjà définies de nos éléments. -->
@@ -155,7 +155,7 @@ if(isset($_GET['action']) && ($_GET['action'] == 'ajout' || $_GET['action'] == '
             <input type="text" id="titre" name="titre" value="<?php if(isset($article_actuel['titre']))  echo $article_actuel['titre']; elseif(isset($_POST['titre'])) echo $_POST['titre']; ?>"/> <br />
 
             <label for="description">description</label>
-            <textarea name="description" id="description" value=""><?php if(isset($article_actuel['description'])) echo $article_actuel['description']; elseif(isset($_POST['description'])) echo $_POST['description']; ?></textarea><br />
+            <textarea name="description" id="description" class="commentaire" value=""><?php if(isset($article_actuel['description'])) echo $article_actuel['description']; elseif(isset($_POST['description'])) echo $_POST['description']; ?></textarea><br />
 
             <label for="couleur">couleur</label>
             <input type="color" id="couleur" name="couleur" value="<?php if(isset($article_actuel['couleur']))  echo $article_actuel['couleur']; elseif(isset($_POST['couleur'])) echo $_POST['couleur']; ?>"/> <br />
@@ -169,8 +169,8 @@ if(isset($_GET['action']) && ($_GET['action'] == 'ajout' || $_GET['action'] == '
             </select><br />
 
             <label for="sexe">sexe</label>
-            <input type="radio" name="sexe" value="m" <?php if(isset($_POST['sexe']) && $_POST['sexe'] == 'm') echo 'checked'; elseif(isset($article_actuel) && $article_actuel['sexe'] == 'm') echo 'checked'; elseif(!isset($article_actuel) && !isset($_POST['sexe'])) echo 'checked'; ?> />Homme</option>
-            <input type="radio" name="sexe" value="f" <?php if(isset($_POST['sexe']) && $_POST['sexe'] == 'f') echo 'checked'; elseif(isset($article_actuel) && $article_actuel['sexe'] == 'f') echo 'checked'; ?> />Femme</option><br />
+            <input type="radio" name="sexe" value="m" <?php if(isset($_POST['sexe']) && $_POST['sexe'] == 'm') echo 'checked'; elseif(isset($article_actuel) && $article_actuel['sexe'] == 'm') echo 'checked'; elseif(!isset($article_actuel) && !isset($_POST['sexe'])) echo 'checked'; ?> /><span>Homme</span></option>
+            <input type="radio" name="sexe" value="f" <?php if(isset($_POST['sexe']) && $_POST['sexe'] == 'f') echo 'checked'; elseif(isset($article_actuel) && $article_actuel['sexe'] == 'f') echo 'checked'; ?> /><span>Femme</span></option><br />
 
             <label for="photo">photo</label>
             <input type="file" id="photo" name="photo" /><br />
@@ -178,7 +178,7 @@ if(isset($_GET['action']) && ($_GET['action'] == 'ajout' || $_GET['action'] == '
             <?php
             if(isset($article_actuel))
             {
-                echo "Photo actuelle : <img src=\"$article_actuel[photo]\"  width=\"90\" height=\"90\" /><br />";
+                echo "<label>Photo actuelle :</label> <img src=\"$article_actuel[photo]\"  width=\"90\" height=\"90\" /><br />";
                 echo "<input type=\"hidden\" name=\"photo_actuelle\" value=\"$article_actuel[photo]\" /><br />";
             }
             ?>
@@ -188,9 +188,13 @@ if(isset($_GET['action']) && ($_GET['action'] == 'ajout' || $_GET['action'] == '
             <label for="stock">stock</label>
             <input type="text" id="stock" name="stock" value="<?php if(isset($article_actuel['stock'])) echo $article_actuel['stock']; elseif(isset($_POST['stock'])) echo $_POST['stock'];  ?>"/> <br /> <br />
 
-            <input type="submit" name="enregistrement" value="<?php echo ucfirst($_GET['action']); ?>"/>
+            <input style="height: 50px; width: 100px;" type="submit" name="enregistrement" value="<?php echo ucfirst($_GET['action']); ?>"/>
         </form>
     </div>
     <?php
 }
+
+
+echo "</div>";
+require_once("footer.inc.php");
 ?>

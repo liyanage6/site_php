@@ -111,7 +111,7 @@ require_once('inc/haut_de_site.inc.php');
 require_once('inc/menu.inc.php');
 
 
-echo "<table border='1' style='border-collapse:collapse' cellpadding='7'>";
+echo "<table class='panier' border='1' style='border-collapse:collapse' cellpadding='7'>";
 echo '<tr><td colspan="5">VOTRE PANIER</td></tr>';
 echo "<tr><th>TITRE</th><th>ARTICLE</th><th>QUANTITE</th><th>PRIX UNITAIRE</th><th>ACTION</th></tr>";
 //condition : si le panier est vide : 
@@ -150,6 +150,9 @@ else
 echo "</table>";
 
 
+echo "</div>";
+require_once('inc/footer.inc.php');
+?>
 
 
 

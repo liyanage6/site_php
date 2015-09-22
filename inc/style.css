@@ -1,6 +1,10 @@
-    body{
+@font-face {
+    font-family: 'Adine Kirnberg Alternate';
+    src: url('AdineKirnberg-Alternate.otf');
+}
+body{
     margin: 0;
-    background-color: #808080;
+    background-color: rgba(201, 201, 201,0.8);
     background: url(../photo/bg.jpg) top left repeat;
     background-attachment: fixed;
 }
@@ -108,7 +112,7 @@
         text-decoration: none;
     }
 
-    /******* Menu *******/
+    /************************************************* Menu *******/
     nav{
         width: auto;
         min-height: 60px;
@@ -121,7 +125,7 @@
         border: #C0A028 4px solid;
 
     }
-    /****** Cellule Menu *******/
+    /****************************************** Cellule Menu *******/
     nav li{
         display: inline-block;
         margin-bottom: 10px;
@@ -162,8 +166,34 @@
         font-size: 360%;
         border-bottom: solid #C0A028 1px;
         margin-top: 10px;
-    }
 
+    }
+    /****************************************************** Fiche article ************************************************/
+    .ficheA h3 {
+        color: #cccccc;
+        font-size: 25px;
+    }
+    .ficheA p {
+        color: #cccccc;
+        font-size: 20px;
+    }
+    .ficheA a {
+        color: #cccccc;
+        font-size: 20px;
+    }
+    .ficheA h2 {
+        color: #C0A028;
+        font-size: 28px;
+    }
+    .ficheA h5 {
+        color: #C0A028;
+        font-size: 23px;
+    }
+    /****************************************************** Profil ************************************************/
+    .profil p{
+        color: #cccccc;
+        font-size: 20px;
+    }
     /**************************************************** Page ************************************************/
 section{
     clear: both;
@@ -203,6 +233,17 @@ td, th{
     padding: 5px;
     border: thin solid #000;
 }
+.formulaire label{
+    font-size: 110%;
+}
+.formulaire span{
+    color: #eeeeee;
+}
+
+.titreG {
+    color: #eeeeee;
+    font-size: 25px;
+}
 
 /**************************************************** Boutique ************************************************/
 .gauche{
@@ -215,7 +256,7 @@ td, th{
 .droite div{
     width: 140px;
 
-    border: dotted thin black;
+    border: dotted black;
     margin: 10px;
 }
 .droite div:hover{
@@ -224,8 +265,9 @@ td, th{
 .droite{
     float: left;
     width: auto;
+    height: auto;
     padding: 0 0 0 25px;
-    border-left: 1px solid;
+    border: 1px solid green;
     background: #996633;
     margin-left: 0px;
 }
@@ -236,6 +278,24 @@ td, th{
 img{
     box-shadow: 1px 1px 12px;
 }
+
+/********************************************* Panier *********************************************/
+    .panier{
+        border-color: #eeeeee;
+        color: #eeeeee;
+    }
+    .panier td{
+        border-color: #cccccc;
+    }
+    .panier th{
+        border-color: #cccccc;
+    }
+    .panier tr{
+        border-color: #cccccc;
+    }
+    .panier a {
+        color: #ccc;
+    }
 
 /**************************************************** Commentaire ************************************************/
 .commentaire{
@@ -287,17 +347,12 @@ img{
         width: 30px;
         height: 30px;
         box-shadow: none;
-        border: dashed;
-
     }
     .entete-adresse{  /****		Pied de page adresse		***/
         color: #C0A028;
-        margin-top: -200px;
-        margin-left: 40%;
+        padding-right: 10%;
         font-family: Adine Kirnberg Alternate;
         font-size: 50px;
-        display: inline-block;
-        border: dashed;
     }
     .mentionlegales{
         color:white;
@@ -314,8 +369,6 @@ img{
         font-size: 38px;
         padding-top: 10px;
         padding-right: 10px;
+        width: 170px;
     }
 
-    .entete-droite .tr .td{
-        width: 200px;
-    }

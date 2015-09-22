@@ -8,10 +8,10 @@ require_once('fonctions.inc.php');
 
 /**
  * Pour éviter d'avoir des problème de liens :
- * define('RACINE_SITE', '/'); (Pour le site en serveur)
+ define('RACINE_SITE', '/'); //(Pour le site en serveur)
  */
 
-define('RACINE_SITE', '/site_php/');
+define('RACINE_SITE', '/PHP/site_php/');
 
 // Si le site venait a être transferet sur internet, on définit un chemin automatique : 
 define('RACINE_SERVEUR', $_SERVER['DOCUMENT_ROOT']);
