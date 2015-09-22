@@ -102,7 +102,7 @@ if(isset($_GET['action']) && $_GET['action'] == "suppressionCom")
     executeRequete("DELETE FROM commentaire WHERE id_commentaire='$commentaire_a_supprimer[id_commentaire]'");
     echo "<div class='validation'>Suppression du commentaire de  $commentaire_a_supprimer[nom] - id: $_GET[id_commentaire] - $commentaire_a_supprimer[email] - pseudo: $commentaire_a_supprimer[pseudo]
     </div>";
-    header("location: fiche_article.php?id_article".$commentaire_a_supprimer['id_article']);
+    header("location: fiche_article.php?id_article=".$commentaire_a_supprimer['id_article']);
 }
 
 
