@@ -12,6 +12,7 @@
         margin-left: auto;
         margin-right: auto;
         background-color: rgba(2, 0, 0, 0.8);
+
     }
 
     /***** Entete *****/
@@ -187,6 +188,7 @@ section{
 label{
     float: left;
     width: 250px;
+    color: #fff;
 }
 table{
     width: 100%;
@@ -206,29 +208,30 @@ td, th{
 .gauche{
     float: left;
     width: 150px;
+    margin: 10px;
     background: #04baf6;
     border: solid thin black;
 }
 .droite div{
     width: 140px;
-    padding: 10px;
+
     border: dotted thin black;
-    margin-bottom: 20px;
+    margin: 10px;
 }
 .droite div:hover{
     background: #ff3366;
 }
 .droite{
     float: left;
-    width: 1000px;
+    width: auto;
     padding: 0 0 0 25px;
     border-left: 1px solid;
     background: #996633;
-    margin-left: 50px;
+    margin-left: 0px;
 }
 .article{
     float: left;
-    margin-left: 50px;
+    margin-left: 0px;
 }
 img{
     box-shadow: 1px 1px 12px;

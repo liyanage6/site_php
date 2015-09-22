@@ -31,6 +31,7 @@ echo "</tr>";
 while ($ligne = $resultat->fetch_assoc())
 {
     //crée-moi autant de lignes <tr> qu'il y a de résultats dans la BDD (utilisation de fecth_assoc() qui nous ressort les informations d'array(). Donc récupération par l'intermédiaire d'une boucle foreach()
+    debug($ligne);
     echo '<tr>';
     foreach ($ligne as $indice => $information)
         //on récupère les indices et à les informations. Exemple : $article['id_article'] = 1
@@ -44,13 +45,42 @@ while ($ligne = $resultat->fetch_assoc())
             echo "<td>" . $information . "</td>";
         }
     }
-    echo '<td><a href="?action=modification&id_article=' . $ligne['id_commande'] .'">No</a></td>';
-    echo '<td><a href="?action=suppression&id_article=' . $ligne['id_commande'] .'"
-OnClick="return(confirm(\'En êtes vous certain ?\'));">Yes</a></td>';
+    echo '<td><a href="?action=annulation&id_commande=' . $ligne['id_commande'] .'">No</a></td>';
+    echo '<td><a href="?action=validation&id_commande=' . $ligne['id_commande'] .'";">Yes</a></td>';
     echo '</tr>';
 }
 echo '</table>';
 echo "</div>";
 
 
+if(isset($_GET['action']) && $_GET['action'] == "annulation")
+{
+
+    $resultat = informationSurUneCommande($_GET['id_commande']);
+    $commande_a_supprimer = $resultat->fetch_assoc();
+    //debug($resultat);debug($commande_a_supprimer);
+
+    echo "<div class='validation'>Annulation de la commande : numéro $_GET[id_commande] - d'un montant de
+    $commande_a_supprimer[montant] - faite le $commande_a_supprimer[date] par membre d'id $commande_a_supprimer[id_membre]
+    </div>";
+    executeRequete("UPDATE commande SET etat = 'annule' WHERE id_commande=$commande_a_supprimer[id_commande]");
+    header('location: gestion_commandes.php');
+}
+
+if(isset($_GET['action']) && $_GET['action'] == "validation")
+{
+    $resultat = informationSurUneCommande($_GET['id_commande']);
+    $commande_a_valide = $resultat->fetch_assoc();
+    //debug($resultat);debug($commande_a_valide);
+
+
+    echo "<div class='validation'>Validation de la commande : numéro $_GET[id_commande] - d'un montant de
+    $commande_a_valide[montant] - faite le $commande_a_valide[date] par membre d'id  $commande_a_valide[id_membre]
+    </div>";
+    executeRequete("UPDATE commande SET etat='valide' WHERE id_commande=$commande_a_valide[id_commande]");
+    header('location: gestion_commandes.php');
+}
+
+echo'</div>';
+require_once('../inc/footer.inc.php');
 ?>

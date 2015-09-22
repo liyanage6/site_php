@@ -22,6 +22,6 @@
                     <img class="logoHE" src="photo/HE-logo.png" alt="logo hotel de l'est"/>
                 </a>
 
-                <h1 class="titre-entete"><a href="index.html">Homme <span> Elégant</span> </a></h1>
+                <h1 class="titre-entete"><a href="index.html">H<span> E</span> </a></h1>
             </header>
 		

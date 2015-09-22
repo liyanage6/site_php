@@ -19,7 +19,7 @@ CREATE TABLE commande (
   id_membre int(5) default NULL,
   montant double(7,2) NOT NULL,
   date datetime NOT NULL,
-  etat enum('en cours de traitement','envoyé','livré') NOT NULL default 'en cours de traitement',
+  etat enum('en cours de traitement','annulé','validé') NOT NULL default 'en cours de traitement',
   PRIMARY KEY  (id_commande),
   KEY id_membre (id_membre)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 ;

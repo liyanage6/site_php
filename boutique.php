@@ -16,11 +16,14 @@ while($cat = $categorie_des_articles->fetch_assoc())
 }
 
 echo "</ul></div>";
-
+/**
+ *
 echo '  <div class="droite">
-            <h2>Bon shooping !</h2>
-        </div>
+<h2>Bon shooping !</h2>
+</div>
 ';
+ */
+
 
 //affichage articles :
 echo '<div class="droite">';
@@ -39,5 +42,8 @@ if(isset($_GET['categorie']))//je récupère l'indice 'categorie' de l'url
 }
 echo '</div>';
 
+
+echo '</div>';
+require_once('inc/footer.inc.php');
 ?>
 

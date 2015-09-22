@@ -96,6 +96,11 @@ function informationSurUnCommentaire($id)
     return $resultat;
 }
 
+function informationSurUneCommande($id)
+{
+	$resultat = executeRequete("SELECT * FROM commande WHERE id_commande=$id");
+	return $resultat;
+}
 /****************
 FONCTIONS PANIER
  ****************/

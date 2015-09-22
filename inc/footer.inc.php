@@ -17,7 +17,8 @@
             <td><p class="entete-droite"><a href="index.html">  Acceuil  </a></p></td>
         </tr>
         <tr>
-            <td><p class="entete-droite"><a href="mentionlegales.html"> Mentions Légales </a></p></td>
+            <td><p style="width: 500px" class="entete-droite"><a href="mentionlegales.html"> Mentions Légales
+                    </a></p></td>
         </tr>
     </table>
             <p class="entete-adresse">56 rue Bassano 75008 Paris <br> Tel : +33 (0)1 01 01 01 01 </p>

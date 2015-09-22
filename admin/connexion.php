@@ -72,6 +72,10 @@ echo $msg; //affichage des messages
 
 		</form>
 
+<?php
+
+require_once('../inc/footer.inc.php');
+?>
 
 
 

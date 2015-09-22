@@ -34,6 +34,4 @@
 
 </nav>
 <section>
-	
-
 
