@@ -59,7 +59,8 @@ if(isset($_GET['id_article']) && $_GET['id_article'])//je récupère les informa
             </form>
             ";
 }
-//debug($_SESSION);
+debug($_SESSION);
+debug($_GET['id_article']);
 //var_dump($_SESSION['utilisateur']['pseudo']);
 
 if(isset($_POST['envoyer']) && $_POST['envoyer'] && utilisateurEstConnecte()){
@@ -69,8 +70,8 @@ if(isset($_POST['envoyer']) && $_POST['envoyer'] && utilisateurEstConnecte()){
     }
     else
     {
-        executeRequete("INSERT INTO commentaire (id_membre, pseudo, contenu, email) VALUES (".$_SESSION['utilisateur']['id_membre'].",
-    '".$_SESSION['utilisateur']['pseudo']."', '$_POST[commentaire]','".$_SESSION['utilisateur']['email']."')");
+        executeRequete("INSERT INTO commentaire (id_membre, pseudo, contenu, email, id_article) VALUES (".$_SESSION['utilisateur']['id_membre'].",
+    '".$_SESSION['utilisateur']['pseudo']."', '$_POST[commentaire]','".$_SESSION['utilisateur']['email']."','$_GET[id_article]')");
         echo "<div class='validation'>Félicitations ! Vous venez d'ajouter un commentaire. Merci pour votre contribution</div> ";
 
     }
@@ -80,7 +81,7 @@ elseif(isset($_POST['envoyer']) && $_POST['envoyer'] && !utilisateurEstConnecte(
     echo "<div class='erreur'>Connectez-vous pour pouvoir commenter cette article</div> ";
 }
 
-$resultat = executeRequete("SELECT * FROM commentaire");
+$resultat = executeRequete("SELECT * FROM commentaire WHERE id_article =".$_GET['id_article']);
 echo "<p>Nombre de commentaire(s) pour cette article : " . $resultat->num_rows."</p>";
 
 while($ligne = $resultat->fetch_assoc())
