@@ -59,26 +59,21 @@ if(isset($_GET['id_article']) && $_GET['id_article'])//je récupère les informa
             </form>
             ";
 }
-debug($_SESSION);
-debug($_GET['id_article']);
+//debug($_SESSION);
+//debug($_GET['id_article']);
 //var_dump($_SESSION['utilisateur']['pseudo']);
 
-if(isset($_POST['envoyer']) && $_POST['envoyer'] && utilisateurEstConnecte()){
-    if(empty(trim($_POST['commentaire']))){
+if(trim($_POST['commentaire']) == '' && isset($_POST['envoyer']) && $_POST['envoyer'] && utilisateurEstConnecte()){
         echo "<div class='erreur'> Le commentaire est vide !</div>";
-
-    }
-    else
-    {
-        executeRequete("INSERT INTO commentaire (id_membre, pseudo, contenu, email, id_article) VALUES (".$_SESSION['utilisateur']['id_membre'].",
-    '".$_SESSION['utilisateur']['pseudo']."', '$_POST[commentaire]','".$_SESSION['utilisateur']['email']."','$_GET[id_article]')");
-        echo "<div class='validation'>Félicitations ! Vous venez d'ajouter un commentaire. Merci pour votre contribution</div> ";
-
-    }
 }
 elseif(isset($_POST['envoyer']) && $_POST['envoyer'] && !utilisateurEstConnecte())
 {
     echo "<div class='erreur'>Connectez-vous pour pouvoir commenter cette article</div> ";
+}
+elseif(isset($_POST['envoyer']) && $_POST['envoyer'] && utilisateurEstConnecte() && trim($_POST['commentaire']) !== '')
+{
+        executeRequete("INSERT INTO commentaire (id_membre, pseudo, contenu, email, id_article) VALUES (".$_SESSION['utilisateur']['id_membre'].",'".$_SESSION['utilisateur']['pseudo']."', '$_POST[commentaire]','".$_SESSION['utilisateur']['email']."','$_GET[id_article]')");
+        echo "<div class='validation'>Félicitations ! Vous venez d'ajouter un commentaire. Merci pour votre contribution</div> ";
 }
 
 $resultat = executeRequete("SELECT * FROM commentaire WHERE id_article =".$_GET['id_article']);

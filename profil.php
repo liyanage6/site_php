@@ -28,7 +28,7 @@ if($_SESSION['utilisateur']['statut']==1){
 }
 else
 	{
-		echo "Vous êtes un utilisateur ! ";
+		echo "<p>Vous êtes un utilisateur ! </p>";
 	}
 echo "</div>";
 
