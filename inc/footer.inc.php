@@ -11,14 +11,14 @@
             </a>
         <table class="pied2page">
             <tr>
-                <td style="border: none;"><p class="entete-droite"><a href="contact.html"> Contact  </a></p></td>
+                <td style="border: none;"><p class="entete-droite"><a href="contact.php"> Contact  </a></p></td>
                 <td style="border: none;" rowspan="3"><p class="entete-adresse" style="border: none; width: 500px;">56 rue Bassano 75008 Paris</p> <br><p class="entete-adresse"> Tel : +33 (0)1 01 01 01 01 </p></td>
             </tr>
             <tr>
-                <td style="border: none;"><p class="entete-droite"><a href="index.html">  Acceuil  </a></p></td>
+                <td style="border: none;"><p class="entete-droite"><a href="index.php">  Acceuil  </a></p></td>
             </tr>
             <tr>
-                <td style="border: none;"><p class="entete-droite"><a href="mentionlegales.html"> Mentions Légales</a></p></td>
+                <td style="border: none;"><p class="entete-droite"><a href="mentionlegales.php"> Mentions Légales</a></p></td>
             </tr>
         </table>
 

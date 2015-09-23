@@ -16,25 +16,19 @@ while($cat = $categorie_des_articles->fetch_assoc())
 }
 
 echo "</ul></div>";
-/**
- *
-echo '  <div class="droite">
-<h2>Bon shooping !</h2>
-</div>
-';
- */
 
 
 //affichage articles :
 echo '<div class="droite">';
 if(isset($_GET['categorie']))//je récupère l'indice 'categorie' de l'url
 {
-    $donnees = executeRequete("SELECT id_article,reference,titre,photo,prix FROM article WHERE categorie='$_GET[categorie]'");
+    $donnees = executeRequete("SELECT id_article,reference,titre,photo,prix,taille FROM article WHERE categorie='$_GET[categorie]'");
 
     while($article = $donnees->fetch_assoc()) //je récupère les informations
     {
+        //debug($article);
         echo '<div class="article">';
-        echo "<h4>$article[titre]</h4>";
+        echo "<h4>$article[titre]- Taille: $article[taille]</h4>";
         echo "<img src='$article[photo]' width='140' height='140'><br><br>";
         echo "<a href='fiche_article.php?id_article=$article[id_article]'>Voir détail</a>";
         echo '</div>';
@@ -43,7 +37,6 @@ if(isset($_GET['categorie']))//je récupère l'indice 'categorie' de l'url
 echo '</div>';
 
 
-echo '</div>';
 require_once('inc/footer.inc.php');
 ?>
 

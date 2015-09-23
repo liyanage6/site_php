@@ -1,10 +1,11 @@
 <?php
 require_once('inc/init.inc.php');
-if(isset($_GET['id_article']) && $_GET['id_article'])//je récupère les informations dans l'URL
+if(isset($_GET['id_article']))//je récupère les informations dans l'URL
 {
     //récupération des informations sur l'article :
     $resultat = informationSurUnArticle($_GET['id_article']);
 //debug($resultat);
+
     if($resultat->num_rows <= 0) //la requête renvoie 0 : c'est-à-dire qu'il n'y a aucun article correspondant à l'id_article de l'url. Exemple : si l'id_article 29 n'est pas présent dans la BDD, alors num_rows sera égal à 0. Donc redirection avec la page boutique.php. Par contre, si l'id_article est présent dans la BDD, alors on affichera les informations propres à l'article en question !
     {
         header("location:boutique.php");
@@ -58,12 +59,12 @@ if(isset($_GET['id_article']) && $_GET['id_article'])//je récupère les informa
                 <input value='Envoyer' name='envoyer' type='submit'>
             </form>
             ";
-}
+
 //debug($_SESSION);
 //debug($_GET['id_article']);
 //var_dump($_SESSION['utilisateur']['pseudo']);
 
-if(trim($_POST['commentaire']) == '' && isset($_POST['envoyer']) && $_POST['envoyer'] && utilisateurEstConnecte()){
+if(isset($_POST['envoyer']) && $_POST['envoyer'] && utilisateurEstConnecte() && trim($_POST['commentaire']) == '' ){
         echo "<div class='erreur'> Le commentaire est vide !</div>";
 }
 elseif(isset($_POST['envoyer']) && $_POST['envoyer'] && !utilisateurEstConnecte())
@@ -76,31 +77,34 @@ elseif(isset($_POST['envoyer']) && $_POST['envoyer'] && utilisateurEstConnecte()
         echo "<div class='validation'>Félicitations ! Vous venez d'ajouter un commentaire. Merci pour votre contribution</div> ";
 }
 
-$resultat = executeRequete("SELECT * FROM commentaire WHERE id_article =".$_GET['id_article']);
+
+$resultat = executeRequete("SELECT * FROM commentaire WHERE id_article ='".$_GET['id_article']."'");
 echo "<p>Nombre de commentaire(s) pour cette article : " . $resultat->num_rows."</p>";
+
 
 while($ligne = $resultat->fetch_assoc())
 {
+    //debug($ligne);
     echo "<br><p>".$ligne['pseudo']." a commenté : </p>";
     echo "<textarea class='commentaire' disabled>".$ligne['contenu']."</textarea><br>";
 
     if(utilisateurEstConnecteEtAdmin()){
-    echo "<a href='?action=suppressionCom?id_commentaire=".$ligne['id_commentaire']."'> Supprimer</a>";
+    echo "<a href='?action=suppressionCom?id_commentaire=".$ligne['id_commentaire']."?id_article=".$ligne['id_article']."'>Supprimer</a>";
     }
 }
 echo "</div>";
 /**
  * Suppresion d'un commentaire TODO A finir Non fonctionnel !
  */
-if(isset($_GET['action']) && $_GET['action'] == "suppressionCom")
+if(isset($_GET['action']) && $_GET['action'] == "suppressionCom" && utilisateurEstConnecteEtAdmin())
 {
-    $resultat = informationSurUnCommentaire($_GET['id_commentaire']);
+    $resultat = informationSurUnCommentaire($ligne['id_commentaire']);
     $commentaire_a_supprimer = $resultat->fetch_assoc();
 
     executeRequete("DELETE FROM commentaire WHERE id_commentaire='$commentaire_a_supprimer[id_commentaire]'");
     echo "<div class='validation'>Suppression du commentaire de  $commentaire_a_supprimer[nom] - id: $_GET[id_commentaire] - $commentaire_a_supprimer[email] - pseudo: $commentaire_a_supprimer[pseudo]
     </div>";
-    header("location: fiche_article.php?id_article=".$commentaire_a_supprimer['id_article']);
+    header("location: fiche_article.php?id_article=".$commentaire_a_supprimer['id_article']."");
 }
 
 
@@ -108,7 +112,9 @@ if(isset($_GET['action']) && $_GET['action'] == "suppressionCom")
 
 
 echo "</div>";
-require_once("inc/footer.inc.php")
+require_once("inc/footer.inc.php");
+
+}
 ?>
 
 

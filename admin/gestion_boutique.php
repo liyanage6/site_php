@@ -88,7 +88,7 @@ article</a></li>
 
 if(isset($_GET['action']) && $_GET['action'] == "affichage")
 {
-    echo '<div style="background-color: rgba(201, 201, 201,0.5);padding: 10px;margin: 10px; ">
+    echo '<div style="background-color: rgba(201, 201, 201,0.5);padding: 10px;">
 	<h1> Affichage des Articles </h1>';
     $resultat = executeRequete("SELECT * FROM article");
     echo "Nombre d'article(s) dans la boutique : " . $resultat->num_rows;

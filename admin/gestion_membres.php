@@ -27,20 +27,20 @@ if(isset($_GET['action']) && $_GET['action'] == "suppression")
 require_once('haut_de_site.inc.php');
 require_once('../inc/menu.inc.php');
 
-echo '<div style="background-color: rgba(201, 201, 201,0.5);padding: 10px;margin: 10px; ">
+echo '<div style="background-color: rgba(201, 201, 201,0.5);padding: 10px;">
 	<h1> Affichage des Membres </h1>';
 $resultat = executeRequete("SELECT * FROM membre");
 echo "Nombre de membre(s) : " . $resultat->num_rows;
 
 $nbcol = $resultat->field_count;
-echo "<table style='border-color:red' border=10> <tr>";
+echo "<table> <tr>";
 for ($i=0; $i < $nbcol; $i++)
 {
     $colonne = $resultat->fetch_field();
     echo '<th>' . $colonne->name . '</th>';
 }
 echo "<th>Mail</th>";
-echo "<th>Supr.</th>";
+echo "<th >Supr.</th>";
 echo "</tr>";
 
 while ($ligne = $resultat->fetch_assoc())
@@ -143,7 +143,7 @@ if(isset($_GET['action']) && $_GET['action'] == 'mail')
 
             /* Construction du message */
             $mail  = 'Bonjour,'."\r\n\r\n";
-            $mail .= 'Ce mail a été envoyé depuis nicholasliyanage.com a l\'attention de  '.$civilite.' '.$nom
+            $mail .= 'Ce mail a été envoyé depuis nicholasliyanage.com a l\'attention de  '.$civilite. ' ' .$nom
             ."\r\n\r\n";
             $mail .= 'Voici le message qui vous est adressé :'."\r\n";
             $mail .= '***************************'."\r\n";
@@ -151,10 +151,10 @@ if(isset($_GET['action']) && $_GET['action'] == 'mail')
             $mail .= '***************************'."\r\n";
 
             /* En-têtes de l'e-mail */
-            $headers = 'From: Direction -> nicholasliyanage.com'."\r\n\r\n";
+            $headers = 'From: Direction < nicholasliyanage.com >'."\r\n\r\n";
 
             /* Envoi de l'e-mail */
-            if (mail($to, $sujet, $mail))
+            if (mail($to, $sujet, $mail, $headers))
             {
                 echo '<div class="validation">E-mail envoyé avec succès</div>';
             }

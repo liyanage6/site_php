@@ -5,50 +5,18 @@
 	<title>Hôtel de l'Est</title>
 	<meta charset="utf-8" >
 
-<link rel="stylesheet" type="text/css" href="styles/style.css"/>
-	<link rel="stylesheet" type="text/css" href="styles/jquery/jquery-ui.css"/>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.js"></script>
-	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
-	<!-- Important Owl stylesheet -->
-    <link rel="stylesheet" href="styles/owl.carousel.css">
-     
-    <!-- Default Theme -->
-    <link rel="stylesheet" href="styles/owl.theme.css">
-     
-    <!-- Include js plugin -->
-    <script src="js/owl.carousel.js"></script>
+<link rel="stylesheet" type="text/css" href="inc/style.css"/>
   
 	<style>
 	</style>
 </head>
 <body>	
-	<div class="conteneur">
+	<div class="">
 
-		<header>
-			<a href="">
-				<img class="social" src="images/icone-facebook.png" alt="icone faceook">
-			</a>
-			<a href="">
-				<img class="social" src="images/icon-twiter.png" alt="icone twiter">
-			</a>
-			<a href="index.html"><img classe="logoHE" src="images/HE-logo.png" alt="logo hotel de l'est"></a>
+		<?php
+			require_once('inc/haut_de_site.inc.php');
+		?>
 
-			<p class="entete-droite"><a href="contact.html"> Contact </a></p>
-			<p class="entete-droite"><a href="index.html"> Acceuil </a></p>
-			
-				<h1 class="titre-entete"><a href="index.html">Hotel de <span>l ' Est</span> </a></h1>
-			
-			
-		</header>
-		<nav>
-			<ul>
-				<li><a href="chambres.html" >Chambres</a></li>
-				<li><a href="seminaire.html" >Séminaire</a></li>
-				<li><a href="restaurant.html" >Restaurant</a></li>
-				<li><a href="services.html" >Service</a></li>		
-			</ul>
-		</nav>
 	<div class="principal">
 		<div class="mentionlegales">
 	<h1>Mentions Légales</h1>
@@ -121,31 +89,11 @@
 			<p>Vous avez la faculté, sans autorisation préalable, de faire, depuis un autre site, un lien vers www.XXXXXXXX.fr. Toutefois, XXXXXXXXX récuse l'utilisation de "frames" qui laissent supposer aux internautes qu'ils consultent un autre site que www.XXXXXXX.fr.<p>
 			</div>
 		</div>
-		
-		<footer>
-			<a href="">
-				<img class="social" src="images/icone-facebook.png" alt="icone faceook">
-			</a>
-			<a href="">
-				<img class="social" src="images/icon-twiter.png" alt="icone twiter">
-			</a>
-		<table class="pied2page">
-			<tr>
-				<td><p class="entete-droite"><a href="contact.html"> Contact  </a></p></td>
-			</tr>
-			<tr>
-				<td><p class="entete-droite"><a href="index.html">  Acceuil  </a></p></td>
-			</tr>
-			<tr>
-				<td><p class="entete-droite"><a href="mentionlegales.html"> Mentions Légeles </a></p></td>
-			</tr>
-		</table>
-			
-			
-				<p class="entete-adresse">56 rue Bassano 75008 Paris <br> Tel : +33 (0)1 01 01 01 01 </p>
-		</footer>
 
-
+</div>
+<?php
+require_once('inc/footer.inc.php');
+?>
 
 </body>
 </html>
