@@ -16,6 +16,7 @@ body{
         margin-left: auto;
         margin-right: auto;
         background-color: rgba(2, 0, 0, 0.8);
+        border-radius: 8px;
 
     }
 
@@ -189,6 +190,13 @@ body{
         color: #C0A028;
         font-size: 23px;
     }
+.ficheA label{
+    width: 100px;
+    padding-left: 400px;
+}
+.ficheA select{
+    margin-right: 400px;
+}
     /****************************************************** Profil ************************************************/
     .profil p{
         color: #cccccc;
@@ -223,6 +231,10 @@ label{
 table{
     border-collapse: collapse;
     border: thin solid #000000;
+    width: 100%;
+}
+.tableau table{
+
 }
 table tr td{
     text-align: center;
@@ -239,6 +251,7 @@ td, th{
     color: #eeeeee;
 }
 
+
 .titreG {
     color: #eeeeee;
     font-size: 25px;
@@ -247,8 +260,10 @@ td, th{
 /**************************************************** Boutique ************************************************/
 .gauche{
     float: left;
-    width: 150px;
-    margin: 10px;
+    width: auto;
+    font-size: 22px;
+    margin: 0px;
+    margin-bottom: 300px;
     background: rgba(201, 201, 201,0.5);
     border: solid thin #C0A028;
 }
@@ -265,16 +280,17 @@ td, th{
     width: auto;
     height: auto;
     color: #cccccc;
-    padding: 0 0 0 25px;
+    padding:  0 0 25px;
     /*border: 1px solid #669933;*/
-    margin-left: 200px;
+    margin-left: 260px;
 
 }
 .article{
     float: left;
-    width: 140px;
+    width: 180px;
     border: solid thin #C0A028;
     margin: 18px;
+    height: 350px;
 }
 .article a{
     color: #cccccc;
@@ -319,6 +335,10 @@ img{
     .panier{
         border-color: #eeeeee;
         color: #eeeeee;
+        margin-left:auto;
+        margin-right:auto;
+        width: 60%;
+        margin-bottom: 10px;
     }
     .panier td{
         border-color: #cccccc;

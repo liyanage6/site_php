@@ -19,13 +19,13 @@ if(isset($_GET['id_article']))//je récupère les informations dans l'URL
     $article = $resultat->fetch_assoc(); //=> je rends exploitable les informations sur l'article à afficher
 
     #A présent, on affiche les informations :
-    echo "<div class='ficheA'>";
+    echo "<div class='ficheA' style='text-align: center'>";
     echo "<h3>Titre : $article[titre]</h3>";
     echo "<p>Description : $article[description]</p>";
     echo "<p>Catégorie : $article[categorie]</p>";
     echo "<p>Couleur : $article[couleur]</p>";
     echo "<p>Taille : $article[taille]</p>";
-    echo "<img src='$article[photo]' width='150' height='150'>";
+    echo "<img src='$article[photo]' width='180' height='180'>";
     echo "<p>Prix HT : $article[prix] € + TVA : 19.6%</p>";
 
     #gestion du stock :
@@ -43,7 +43,7 @@ if(isset($_GET['id_article']))//je récupère les informations dans l'URL
         {
             echo '<option>' . $i . '</option>';
         }
-        echo '</select><br>';//en dehors de la boucle !!!
+        echo '</select><br><br>';//en dehors de la boucle !!!
         echo '<input type="submit" name="ajout_panier" value="Ajout au panier">';
         echo '</form>';
     }

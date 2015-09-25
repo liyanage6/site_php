@@ -90,11 +90,11 @@ if(isset($_GET['action']) && $_GET['action'] == "affichage")
 {
     echo '<div style="background-color: rgba(201, 201, 201,0.5);padding: 10px;">
 	<h1> Affichage des Articles </h1>';
-    $resultat = executeRequete("SELECT * FROM article");
+    $resultat = executeRequete("SELECT * FROM article ORDER BY categorie");
     echo "Nombre d'article(s) dans la boutique : " . $resultat->num_rows;
 
     $nbcol = $resultat->field_count;
-    echo "<table style='border-color:red' border=10> <tr>";
+    echo "<table border=10> <tr>";
     for ($i=0; $i < $nbcol; $i++)
     {
         $colonne = $resultat->fetch_field();

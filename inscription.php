@@ -106,7 +106,7 @@ echo $msg; //Affichage des messages
 				<label for="sexe">Sexe</label>
 				<input type="radio" name="sexe" value="M" checked><span>Homme</span>
 				<input type="radio" name="sexe" value="F" ><span>Femme</span>
-				<br>
+				<br><br>
 
 				<label for="ville">Ville</label>
 				<input type="text" id="ville" name="ville" value="" placeholder="ville" 
@@ -119,7 +119,7 @@ echo $msg; //Affichage des messages
 			    <br>
 
 			    <label for="adresse">Adresse</label>
-			    <textarea type="text" name="adresse" id="adresse" value="" placeholder="adresse" 
+			    <textarea class="commentaire" type="text" name="adresse" id="adresse" value="" placeholder="adresse"
 			    	title="caractères acceptés : a-zA-Z-0-9_-." ></textarea>
 			    <br><br>
 				

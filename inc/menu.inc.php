@@ -1,11 +1,18 @@
 <nav>
 <?php
 	//preparation deconnexion :
-	if(utilisateurEstConnecte() && isset($_GET['action']) && $_GET['action'] === 'deconnexion')
+    if(utilisateurEstConnecteEtAdmin() && isset($_GET['action']) && $_GET['action'] === 'deconnexion')
+        //si internaute demande une déconnexion
+    {
+
+        header('location: ../index.php');
+        session_destroy();
+    }
+	elseif(utilisateurEstConnecte() && isset($_GET['action']) && $_GET['action'] === 'deconnexion')
 	//si internaute demande une déconnexion
 	{
 
-        header('location: connexion.php');
+        header('location: index.php');
         session_destroy();
 	}
 	if(utilisateurEstConnecteEtAdmin())

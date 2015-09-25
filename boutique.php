@@ -14,7 +14,6 @@ while($cat = $categorie_des_articles->fetch_assoc())
 {
     echo "<li><a href='?categorie=". $cat['categorie'] ."'>" .$cat['categorie'] . "</a></li>" ;
 }
-
 echo "</ul></div>";
 
 
@@ -28,8 +27,8 @@ if(isset($_GET['categorie']))//je récupère l'indice 'categorie' de l'url
     {
         //debug($article);
         echo '<div class="article">';
-        echo "<h4>$article[titre]- Taille: $article[taille]</h4>";
-        echo "<img src='$article[photo]' width='140' height='140'><br><br>";
+        echo "<h4>$article[titre]</h4><h4> Taille: $article[taille]</h4>";
+        echo "<img src='$article[photo]' width='180' height='180'><br><br>";
         echo "<a href='fiche_article.php?id_article=$article[id_article]'>Voir détail</a>";
         echo '</div>';
     }

@@ -14,7 +14,7 @@ require_once('inc/menu.inc.php');
  * TODO: Modification du profil
  */
 //debug($_SESSION); //Voir les informations contenues dans $_SESSION
-echo "<div class='profil'>";
+echo "<div class='profil' style='text-align: center;'>";
 print"<p>Bonjour ".$_SESSION['utilisateur']['pseudo']." !</p>";
 print"<p>Votre email ".$_SESSION['utilisateur']['email']."</p>";
 print"<p>Votre nom ".$_SESSION['utilisateur']['nom']."</p>";

@@ -71,7 +71,8 @@ echo $msg; //affichage des messages
 			<input type="submit" name="connexion" value="connexion">
 
 		</form>
-
-
+</div>
+<?php
+require_once('inc/footer.inc.php');
 
 

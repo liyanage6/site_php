@@ -21,6 +21,6 @@
                 <td style="border: none;"><p class="entete-droite"><a href="mentionlegales.php"> Mentions Légales</a></p></td>
             </tr>
         </table>
-
+        <p style="color: #cccccc; text-align: center">© Tous droits réservés Nicholas Liyanage</p>
     </footer>
 </div>

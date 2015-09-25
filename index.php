@@ -8,12 +8,12 @@ require_once('inc/menu.inc.php');
 
 
 echo "<div class='droite' style='margin-left: 10px;'>";
-$donnees = executeRequete("select * from article order by RAND() LIMIT 10");
+$donnees = executeRequete("select * from article order by RAND() LIMIT 12");
 while($article = $donnees->fetch_assoc()) //je récupère les informations
 {
     echo '<div class="article">';
-    echo "<h4>$article[titre] - Taille: $article[taille]</h4>";
-    echo "<img src='$article[photo]' width='140' height='140'><br><br>";
+    echo "<h4>$article[titre] </h4><h4> Taille: $article[taille]</h4>";
+    echo "<img src='$article[photo]' width='180' height='180'><br><br>";
     echo "<a href='fiche_article.php?id_article=$article[id_article]'>Voir détail</a>";
     echo '</div>';
 }
